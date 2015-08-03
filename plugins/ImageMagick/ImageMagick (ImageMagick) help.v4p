@@ -1,0 +1,11 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\Users\Johannes Lemke\Repositories\jhnnslmk-lib\plugins\ImageMagick\ImageMagick (ImageMagick) help.v4p" systemname="ImageMagick (ImageMagick) help" filename="C:\Users\Johannes Lemke\Repositories\jhnnslmk-lib\plugins\ImageMagick\ImageMagick (ImageMagick) help.v4p">
+   <BOUNDS type="Window" left="11295" top="5370" width="9000" height="6000">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.7.0">
+   </PACK>
+   <NODE systemname="ImageMagick (ImageMagick)" filename="ImageMagickImageMagick\ImageMagickImageMagick.csproj" nodename="ImageMagick (ImageMagick)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="2940" top="2520" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   </PATCH>
