@@ -36,3 +36,35 @@ C:\Users\Johannes Lemke\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU
 C:\Users\Johannes Lemke\Repositories\jhnnslmk-lib\plugins\ImageMagick\obj\Debug\ImageMagick.csprojResolveAssemblyReference.cache
 C:\Users\Johannes Lemke\Repositories\jhnnslmk-lib\plugins\ImageMagick\obj\Debug\ImageMagickImageMagick.dll
 C:\Users\Johannes Lemke\Repositories\jhnnslmk-lib\plugins\ImageMagick\obj\Debug\ImageMagickImageMagick.pdb
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\ImageMagickImageMagick.dll
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\ImageMagickImageMagick.pdb
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\Magick.NET-AnyCPU.dll
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\Magick.NET.Core.dll
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\System.Reflection.Context.CodePlex.dll
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\Microsoft.Practices.Unity.dll
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\ICSharpCode.SharpDevelop.Dom.dll
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\ICSharpCode.NRefactory.dll
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\CommandLine.dll
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\System.Reactive.Linq.dll
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\System.Reactive.Interfaces.dll
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\System.Reactive.Core.dll
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\VVVV.UtilsIL.dll
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\Mono.Cecil.dll
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\log4net.dll
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\Magick.NET-AnyCPU.xml
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\Magick.NET.Core.xml
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\SlimDX.xml
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\System.ComponentModel.Composition.Codeplex.xml
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\VVVV.PluginInterfaces.xml
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\VVVV.Utils.xml
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\VVVV.Utils3rdParty.xml
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\Microsoft.Practices.Unity.xml
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\CommandLine.xml
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\System.Reactive.Linq.xml
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\System.Reactive.Interfaces.xml
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\System.Reactive.Core.xml
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\bin\AnyCPU\Debug\VVVV.UtilsIL.xml
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\obj\Debug\ImageMagick.csprojResolveAssemblyReference.cache
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\obj\Debug\ImageMagickImageMagick.dll
+E:\Repositories\jhnnslmk-lib\plugins\ImageMagick\obj\Debug\ImageMagickImageMagick.pdb
