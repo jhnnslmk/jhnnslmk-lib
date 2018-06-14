@@ -1,0 +1,65 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
+   <PATCH nodename="D:\Repositories\jhnnslmk-lib\modules\SingleVertex (DX11.Geometry).v4p" systemname="SingleVertex (DX11.Geometry)" filename="D:\Repositories\jhnnslmk-lib\modules\SingleVertex (DX11.Geometry).v4p">
+   <NODE systemname="GeometryBuffer (DX11.Geometry Join)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="GeometryBuffer (DX11.Geometry Join)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="750" top="1485" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="750" top="1485" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Topology" slicecount="1" values="PointList">
+   </PIN>
+   <PIN pinname="Input Layout" visible="1">
+   </PIN>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   <PIN pinname="Vertices" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="InputElement (DX11.Geometry Join)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="InputElement (DX11.Geometry Join)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1575" top="1020" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1575" top="1020" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Auto Index" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="2" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="750" top="210" width="780" height="780">
+   </BOUNDS>
+   <BOUNDS type="Node" left="750" top="210" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0,0,0,1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Vertices">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="0" dstpinname="Input Layout">
+   </LINK>
+   <NODE id="3" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Geometry Out|">
+   </PIN>
+   <BOUNDS type="Box" left="750" top="2085" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="750" top="2085" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Geometry Out" dstnodeid="3" dstpinname="Input Node">
+   </LINK>
+   <BOUNDS type="Window" left="-1" top="-1" width="3925" height="4375">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   </PATCH>
