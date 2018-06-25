@@ -1,0 +1,47 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.2.dtd" >
+   <PATCH nodename="D:\Repositories\moovel-iwanttobeanav\Software\nodes\modules\UVGrid\UVGrid (DX11.Texture 2d).v4p" systemname="UVGrid (DX11.Texture 2d)" filename="D:\Repositories\moovel-iwanttobeanav\Software\nodes\modules\UVGrid\UVGrid (DX11.Texture 2d).v4p">
+   <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="915" top="1050" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" values="UVGrid.png" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="915" top="1050">
+   </BOUNDS>
+   </NODE>
+   <BOUNDS type="Window" left="24360" top="13515" width="3285" height="3285">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="915" top="1575" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="915" top="1575" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Texture Out|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Texture Out" dstnodeid="1" dstpinname="Input Node">
+   </LINK>
+   <INFO author="readme" description="" tags="uv, texturecoordinate, grid">
+   </INFO>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="915" top="495" width="1095" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="915" top="495" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="UVGrid.png">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="|All Files (*.*)||*.*|">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output String" dstnodeid="0" dstpinname="Filename">
+   </LINK>
+   </PATCH>

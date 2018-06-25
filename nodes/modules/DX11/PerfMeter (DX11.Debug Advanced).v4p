@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="D:\Repositories\bmw-iperformance\Software\nodes\modules\PerfMeter (DX11.Debug Advanced).v4p" systemname="PerfMeter (DX11.Debug Advanced)" filename="D:\Repositories\sbsn-friedland-lagerchronik\Software\Contributions\modules\PerfMeter (DX11.Debug Advanced).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="D:\Repositories\KIA-Dashboard18\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\DX11\PerfMeter (DX11.Debug Advanced).v4p" systemname="PerfMeter (DX11.Debug Advanced)" filename="D:\Repositories\sbsn-friedland-lagerchronik\Software\Contributions\modules\PerfMeter (DX11.Debug Advanced).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="13035" top="9330" width="15015" height="12030">
    </BOUNDS>
-   <PACK Name="addonpack" Version="34.1.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE componentmode="InABox" id="39" nodename="IOBox (Node)" systemname="IOBox (Node)">
    <BOUNDS height="0" left="135" top="975" type="Node" width="0">
@@ -584,18 +584,6 @@
    </LINK>
    <LINK srcnodeid="16" srcpinname="Transform Out" dstnodeid="40" dstpinname="Transform In">
    </LINK>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="42" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="6855" top="7170" width="1590" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="6855" top="7170" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" values="|Lucida Console|">
-   </PIN>
-   <PIN pinname="Output Enum" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="42" srcpinname="Output Enum" dstnodeid="40" dstpinname="Font">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="43" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="3045" top="450" width="795" height="240">
    </BOUNDS>
@@ -612,20 +600,6 @@
    </NODE>
    <LINK srcnodeid="43" srcpinname="Y Output Value" dstnodeid="40" dstpinname="Size">
    </LINK>
-   <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="44">
-   <BOUNDS type="Node" left="1470" top="7380" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="backdrop">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Color" slicecount="1" visible="1" values="|0.00185,0.00185,0.00185,1.00000|">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="45">
    <BOUNDS type="Node" left="4335" top="7755" width="100" height="100">
    </BOUNDS>
@@ -634,6 +608,8 @@
    <PIN pinname="Color" visible="1">
    </PIN>
    <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="32" srcpinname="Output" dstnodeid="45" dstpinname="Color">
@@ -671,10 +647,6 @@
    <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="41" dstpinname="Layer 3">
    </LINK>
    <LINK srcnodeid="40" srcpinname="Layer" dstnodeid="41" dstpinname="Layer 4">
-   </LINK>
-   <LINK srcnodeid="24" srcpinname="Transform Out" dstnodeid="44" dstpinname="Transform">
-   </LINK>
-   <LINK srcnodeid="44" srcpinname="Layer" dstnodeid="41" dstpinname="Layer 1">
    </LINK>
    <NODE systemname="PixelBillBoard (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="PixelBillBoard (DX11.Layer)" componentmode="Hidden" id="48">
    <BOUNDS type="Node" left="1635" top="9300" width="100" height="100">
@@ -917,7 +889,7 @@
    <LINK srcnodeid="73" srcpinname="Y Output Value" dstnodeid="16" dstpinname="TranslateY">
    </LINK>
    <NODE systemname="Sign (Value)" nodename="Sign (Value)" componentmode="Hidden" id="74">
-   <BOUNDS type="Node" left="7800" top="5580" width="100" height="100">
+   <BOUNDS type="Node" left="11520" top="5640" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -927,7 +899,7 @@
    <LINK srcnodeid="73" srcpinname="Y Output Value" dstnodeid="74" dstpinname="Input">
    </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="75">
-   <BOUNDS type="Node" left="8160" top="5925" width="100" height="100">
+   <BOUNDS type="Node" left="11880" top="5985" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -995,9 +967,9 @@
    </LINKPOINT>
    </LINK>
    <NODE systemname="GlyphInfo (String)" nodename="GlyphInfo (String)" componentmode="Hidden" id="77">
-   <BOUNDS type="Node" left="9525" top="5220" width="100" height="100">
+   <BOUNDS type="Node" left="10740" top="4740" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Font" visible="1">
+   <PIN pinname="Font" visible="1" slicecount="1" values="|Lucida Console|">
    </PIN>
    <PIN pinname="Size" visible="1">
    </PIN>
@@ -1006,8 +978,6 @@
    <PIN pinname="Width" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="42" srcpinname="Output Enum" dstnodeid="77" dstpinname="Font">
-   </LINK>
    <LINK srcnodeid="43" srcpinname="Y Output Value" dstnodeid="77" dstpinname="Size">
    </LINK>
    <LINK srcnodeid="52" srcpinname="Output String" dstnodeid="77" dstpinname="Input">
@@ -1057,7 +1027,7 @@
    <LINK srcnodeid="84" srcpinname="Y Output Value" dstnodeid="92" dstpinname="X">
    </LINK>
    <NODE systemname="Bounds (Spectral)" nodename="Bounds (Spectral)" componentmode="Hidden" id="93">
-   <BOUNDS type="Node" left="11100" top="6120" width="100" height="100">
+   <BOUNDS type="Node" left="11085" top="5070" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1067,17 +1037,15 @@
    <LINK srcnodeid="77" srcpinname="Width" dstnodeid="93" dstpinname="Input">
    </LINK>
    <NODE systemname="SetAlpha (Color)" nodename="SetAlpha (Color)" componentmode="Hidden" id="94">
-   <BOUNDS type="Node" left="2820" top="7500" width="100" height="100">
+   <BOUNDS type="Node" left="2595" top="6915" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Alpha" slicecount="1" values="0.5">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="94" srcpinname="Output" dstnodeid="44" dstpinname="Color">
-   </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="95">
-   <BOUNDS type="Node" left="9840" top="6825" width="100" height="100">
+   <BOUNDS type="Node" left="11610" top="6360" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1093,5 +1061,95 @@
    <LINK srcnodeid="95" srcpinname="Output" dstnodeid="92" dstpinname="Y">
    </LINK>
    <LINK srcnodeid="92" srcpinname="XY" dstnodeid="24" dstpinname="ScaleX">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.5">
+   </PACK>
+   <NODE systemname="Validator (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Validator (DX11.Layer)" componentmode="Hidden" id="96">
+   <BOUNDS type="Node" left="3135" top="8325" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3135" top="8325" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Validators" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Select (DX11.Validator)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Select (DX11.Validator)" componentmode="Hidden" id="99">
+   <BOUNDS type="Node" left="3450" top="7980" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3450" top="7980" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Enable Slice" visible="1" slicecount="2" values="1,1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="96" srcpinname="Layer Out" dstnodeid="41" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="Output" dstnodeid="96" dstpinname="Validators">
+   </LINK>
+   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="100">
+   <BOUNDS type="Node" left="3450" top="7620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="101">
+   <BOUNDS type="Node" left="3555" top="6915" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Inverse Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="52" srcpinname="Output String" dstnodeid="101" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Inverse Output" dstnodeid="100" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="100" srcpinname="XY" dstnodeid="99" dstpinname="Enable Slice">
+   </LINK>
+   <NODE systemname="Constant (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\Constant.fx" nodename="Constant (DX11.Effect)" componentmode="Hidden" id="44">
+   <BOUNDS type="Node" left="1470" top="7380" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="backdrop">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" visible="1" values="|0.00185,0.00185,0.00185,1.00000|">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Geometry" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Transform Out" dstnodeid="44" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="94" srcpinname="Output" dstnodeid="44" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Layer" dstnodeid="96" dstpinname="Layer In">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Transform Out" dstnodeid="44" dstpinname="Transform In">
+   </LINK>
+   <NODE systemname="Grid (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Grid (DX11.Geometry)" componentmode="Hidden" id="102">
+   <BOUNDS type="Node" left="615" top="6945" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="615" top="6945" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="102" srcpinname="Geometry Out" dstnodeid="44" dstpinname="Geometry">
    </LINK>
    </PATCH>

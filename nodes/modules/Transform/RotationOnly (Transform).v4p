@@ -1,0 +1,95 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.5.dtd" >
+   <PATCH nodename="D:\moovel-iwanttobeanav\Software\nodes\modules\RotationOnly (Transform).v4p" systemname="RotationOnly (Transform)" filename="D:\moovel-iwanttobeanav\Software\nodes\modules\RotationOnly (Transform).v4p">
+   <NODE systemname="Multiply (3d Vector)" nodename="Multiply (3d Vector)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="2985" top="1860" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="XYZ Transformed" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="1" systemname="Inverse (Transform)" nodename="Inverse (Transform)" componentmode="Hidden">
+   <BOUNDS type="Node" left="1770" top="2505" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Source" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="2" systemname="Translate (Transform Vector)" nodename="Translate (Transform Vector)" componentmode="Hidden">
+   <BOUNDS type="Node" left="2310" top="2190" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="3" systemname="Multiply (Transform)" nodename="Multiply (Transform)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="1500" top="2925" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Tag" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transform In Count" pintype="Configuration" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Transform In" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transform In 1" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transform In 2" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <NODE id="4" nodename="IOBox (Node)" componentmode="InABox" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="1575" top="1500" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1575" top="1500" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output Node" dstnodeid="3" dstpinname="Transform In 1">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Transform Out" dstnodeid="3" dstpinname="Transform In 2">
+   </LINK>
+   <NODE id="5" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input Transform|">
+   </PIN>
+   <BOUNDS type="Box" left="1575" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1575" top="500" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output Node" dstnodeid="4" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="1" dstpinname="Source">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="XYZ Transformed" dstnodeid="2" dstpinname="XYZ">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output Node" dstnodeid="0" dstpinname="Transform" linkstyle="VHV">
+   <LINKPOINT x="1615" y="1785">
+   </LINKPOINT>
+   <LINKPOINT x="3005" y="1785">
+   </LINKPOINT>
+   </LINK>
+   <BOUNDS type="Window" left="14685" top="20265" width="4575" height="5415">
+   </BOUNDS>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="8" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="1470" top="3525" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1470" top="3525" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform Out|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Transform Out" dstnodeid="8" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   </PATCH>

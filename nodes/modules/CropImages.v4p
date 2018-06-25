@@ -1,0 +1,119 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
+   <PATCH nodename="D:\Repositories\senckenberg-infostation\Software\nodes\modules\CropImages.v4p" systemname="CropImages" filename="D:\Repositories\senckenberg-infostation\Software\nodes\modules\CropImages.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="31245" top="4470" width="16740" height="20580">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="Cons (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="59">
+   <BOUNDS type="Node" left="2430" top="5700" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2430" top="5700" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="FormatValue (String)" nodename="FormatValue (String)" componentmode="Hidden" id="60">
+   <BOUNDS type="Node" left="2430" top="6045" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="60" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="61">
+   <BOUNDS type="Node" left="2430" top="6390" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="UnixPath">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="61" dstpinname="Input">
+   </LINK>
+   <NODE systemname="FolderExplorer (File)" filename="FolderExplorer (File).v4p" nodename="FolderExplorer (File).v4p" componentmode="Hidden" id="99">
+   <BOUNDS type="Node" left="2115" top="4905" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2115" top="4905" width="6795" height="7530">
+   </BOUNDS>
+   <BOUNDS type="Window" left="37470" top="8505" width="6795" height="7530">
+   </BOUNDS>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   <PIN pinname="Update" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Directory" visible="1">
+   </PIN>
+   <PIN pinname="File Count" visible="1">
+   </PIN>
+   <PIN pinname="File Index" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="100">
+   <BOUNDS type="Node" left="2850" top="5280" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Desktop)" componentmode="Hidden" id="101">
+   <BOUNDS type="Node" left="1785" top="3420" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1785" top="3420" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="101" srcpinname="Device" dstnodeid="99" dstpinname="Keyboard">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="102" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="2115" top="4425" width="4335" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2115" top="4425" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|..\..\..\..\..\NextCloud\MESO-DI\2017\SENCKENBERG 200\SHARED WITH CLIENT\Images|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Directory">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Directory">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="102" srcpinname="Output String" dstnodeid="99" dstpinname="Directory">
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="File Count" dstnodeid="100" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="File Index" dstnodeid="59" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="100" srcpinname="Output" dstnodeid="59" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="ImageCropper" filename="ImageCropper.v4p" nodename="ImageCropper.v4p" componentmode="Hidden" id="108">
+   <BOUNDS type="Node" left="1790" top="7007" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="0" width="9570" height="17475">
+   </BOUNDS>
+   <BOUNDS type="Window" left="20835" top="8145" width="18255" height="17475">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="108" dstpinname="String">
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="Output" dstnodeid="108" dstpinname="Input - Input 1">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Device" dstnodeid="108" dstpinname="Keyboard">
+   </LINK>
+   </PATCH>
