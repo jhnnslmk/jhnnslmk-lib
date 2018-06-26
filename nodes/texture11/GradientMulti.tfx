@@ -27,7 +27,7 @@ float4 PS(psInput input) : SV_Target
 	uint size, stride;
 	ColorBuffer.GetDimensions(size, stride);
 	
-	float4 c = float4(0,0,0,1);
+	float4 c = 0.0f.xxxx;
 	
 	if (size == 1) c = ColorBuffer[0];
 	
@@ -37,7 +37,7 @@ float4 PS(psInput input) : SV_Target
 		{
 //			float f = (i%2==1) ? 2 : 0.5f;
 //			f = 2;
-			c += (input.uv.x >= BreakPointBuffer[i] && input.uv.x <= BreakPointBuffer[i+1]) * lerp(ColorBuffer[i], ColorBuffer[i+1], pow(smoothstep(BreakPointBuffer[i], BreakPointBuffer[i+1], input.uv.x), 1));
+			c += (input.uv.x >= BreakPointBuffer[i] && input.uv.x <= BreakPointBuffer[i+1]) * lerp(ColorBuffer[i], ColorBuffer[i+1], smoothstep(BreakPointBuffer[i], BreakPointBuffer[i+1], input.uv.x));
 		}
 	}
 	

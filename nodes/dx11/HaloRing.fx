@@ -16,6 +16,7 @@ float4x4 tWVP: WORLDVIEWPROJECTION;
 //material properties
 float4 c0 <bool color=true; String uiname="Color Inner";>  = {1, 1, 1, 1};
 float4 c1 <bool color=true; String uiname="Color Outer";>  = {1, 1, 1, 0};
+float4 Tint <bool color=true;> = {1, 1, 1, 1};
 float Alpha = 1;
 
 //the data structure: vertexshader to pixelshader
@@ -52,10 +53,10 @@ vs2ps VS(
 // --------------------------------------------------------------------------------------------------
 
 float r <string uiname="Radius";> = 0.5;
-float w <string uiname="Width";> = 0.1;
-float d0 <string uiname="Fade Inner";> = 0.1;
-float d1 <string uiname="Fade Outer";> = 0.1;
-float4 Tint <bool color=true;>;
+float w <string uiname="Width";> = 0.05;
+float d0 <string uiname="Fade Inner";> = 0.025;
+float d1 <string uiname="Fade Outer";> = 0.025;
+
 float4 PS(vs2ps In): SV_Target
 {
     float4 col;
