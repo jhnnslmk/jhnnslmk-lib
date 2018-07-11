@@ -24,8 +24,8 @@ float Alpha = 1;
 //and as input data with the PS function
 struct vs2ps
 {
-    float4 Pos : SV_Position;
-    float4 TexCd : TEXCOORD0;
+	float4 Pos : SV_Position;
+	float4 TexCd : TEXCOORD0;
 };
 
 // --------------------------------------------------------------------------------------------------
@@ -33,49 +33,67 @@ struct vs2ps
 // --------------------------------------------------------------------------------------------------
 
 vs2ps VS(
-    float4 Pos : POSITION,
-    float4 TexCd : TEXCOORD0)
+float4 Pos : POSITION,
+float4 TexCd : TEXCOORD0)
 {
-    //inititalize all fields of output struct with 0
-    vs2ps Out;
-
-    //transform position
-    Out.Pos = mul(Pos, tWVP);
-
-    //transform texturecoordinates
-    Out.TexCd = TexCd;
-
-    return Out;
+	//inititalize all fields of output struct with 0
+	vs2ps Out;
+	
+	//transform position
+	Out.Pos = mul(Pos, tWVP);
+	
+	//transform texturecoordinates
+	Out.TexCd = TexCd;
+	
+	return Out;
 }
 
 // --------------------------------------------------------------------------------------------------
 // PIXELSHADERS:
 // --------------------------------------------------------------------------------------------------
 
-float r <string uiname="Radius";> = 0.5;
-float w <string uiname="Width";> = 0.05;
-float d0 <string uiname="Fade Inner";> = 0.025;
-float d1 <string uiname="Fade Outer";> = 0.025;
+float r <string uiname="Radius";> = 0.5f;
+float w <string uiname="Width";> = 0.05f;
+float f0 <string uiname="Fade Inner";> = 0.025f;
+float f1 <string uiname="Fade Outer";> = 0.025f;
+float p <string uiname="Phase";> = 1.0f;
+
+static const float PI = 3.14159265f;
 
 float4 PS(vs2ps In): SV_Target
 {
-    float4 col;
+	float4 col = 0.0f.xxxx;
 	
 	float2 uv = (In.TexCd.xy - 0.5) * 2;
+	
+	float phi = (atan2(uv.y/2,uv.x/2))/(2*PI)+0.5f;
+	
 	float d = distance(float2(0,0), uv);
-
-//	solid part in the center
-	col = lerp(c1, c0, abs(r - d) <= w/2);
+	float r0 = r - w/2;
+	float r1 = r + w/2;
 	
-//	inner fading
-	col = saturate(col + lerp(c1, c0, smoothstep(r - w/2 - d0, r - w/2, (d < r-w/2) ? d : 0)));
+	float4 b = 0.0f.xxxx;
 	
-//	outer fading
-	col = saturate(col + lerp(c0, c1, smoothstep(r + w/2, r + w/2 + d1, (d > r+w/2) ? d : 1)));
+	bool inside = ((d < r0) && (d > r0 - f0));
+	bool outside = ((d > r1) && (d < r1 + f1));
+	
+	//	solid part in the center
+	col = c0 * (abs(r - d) <= w/2);
+	
+	//	inner fading
+	col = saturate(col + lerp(c1, c0, smoothstep(r0 - f0, r0, d))*inside);
+	
+	//	outer fading
+	col = saturate(col + lerp(c0, c1, smoothstep(r1, r1 + f1, d))*outside);
+	
+	// Apply Phase
+	col.a *= phi <= p;
 	
 	col.a *= Alpha;
 	
-    return col*Tint;
+	col *= Tint;
+	
+	return col;
 }
 
 // --------------------------------------------------------------------------------------------------
@@ -84,9 +102,9 @@ float4 PS(vs2ps In): SV_Target
 
 technique11 HaloRing
 {
-    pass P0
-    {
+	pass P0
+	{
 		SetVertexShader( CompileShader( vs_4_0, VS() ) );
 		SetPixelShader( CompileShader( ps_4_0, PS() ) );
-    }
+	}
 }
