@@ -20,44 +20,41 @@ cbuffer cbPerDraw : register( b0 )
 cbuffer cbPerObj : register( b1 )
 {
 	float4x4 tW : WORLD;
-	float4 Color <bool color=true;String uiname="Color";> = { 0.0f,0.0f,0.0f,1.0f };
-	float4 BorderColor <bool color=true;String uiname="Border Color";> = { 1.0f,1.0f,1.0f,1.0f };
+	float4 cAmb <bool color=true;String uiname="Color";> = { 1.0f,1.0f,1.0f,1.0f };
 };
 
 struct VS_IN
 {
 	float4 PosO : POSITION;
-	float4 TexCd : TEXCOORD0;
+//	float4 TexCd : TEXCOORD0;
+	float4 Color : COLOR;
 
 };
 
 struct vs2ps
 {
     float4 PosWVP: SV_Position;
-    float4 TexCd: TEXCOORD0;
+//    float4 TexCd: TEXCOORD0;
+	float4 Color : COLOR;
 };
 
 vs2ps VS(VS_IN input)
 {
     vs2ps output;
     output.PosWVP  = mul(input.PosO,mul(tW,tVP));
-    output.TexCd = input.TexCd;
-	
+//    output.TexCd = input.TexCd;
+	output.Color = input.Color;
     return output;
 }
 
-float BorderWidth = 0.1f;
 float4 PS(vs2ps In): SV_Target
 {
-	float2 scale = float2((tW._m11/tW._m00)*2, 1);
-	bool2 b = 1-abs(2*In.TexCd-1) < BorderWidth*scale;
-	
-	float4 col = lerp(Color, BorderColor, max(b.x, b.y));
-	
+//    float4 col = texture2d.Sample(linearSampler,In.TexCd.xy) * In.Color;
+	float4 col = In.Color;
     return col;
 }
 
-technique10 Border
+technique10 Constant
 {
 	pass P0
 	{

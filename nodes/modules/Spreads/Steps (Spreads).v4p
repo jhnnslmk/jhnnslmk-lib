@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="D:\Repositories\KIA-KED13\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\Steps (Spreads).v4p" systemname="Steps (Spreads)" filename="D:\Repositories\Karlsruhe-Medienfassade\Software\nodes\modules\Steps (Spreads).v4p">
+   <PATCH nodename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\Steps (Spreads).v4p" systemname="Steps (Spreads)" filename="D:\Repositories\Karlsruhe-Medienfassade\Software\nodes\modules\Steps (Spreads).v4p">
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="4410" top="3195" width="100" height="100">
    </BOUNDS>
@@ -25,9 +25,9 @@
    <NODE id="3" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
-   <BOUNDS type="Box" left="4140" top="4140" width="750" height="240">
+   <BOUNDS type="Box" left="4140" top="4440" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4140" top="4140" width="750" height="240">
+   <BOUNDS type="Node" left="4140" top="4440" width="750" height="240">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="3" dstpinname="Y Input Value">
@@ -81,6 +81,8 @@
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Input 2">
    </LINK>
@@ -99,11 +101,65 @@
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Input 1">
    </LINK>
-   <PACK Name="dx11" Version="1.0.5">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
+   <NODE systemname="CDR (Spreads)" nodename="CDR (Spreads)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="6315" top="4035" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Last Slice" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="15" dstpinname="Input" linkstyle="PolyLine">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="16">
+   <BOUNDS type="Box" left="6720" top="4440" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6720" top="4440" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Last Slice|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Last Slice" dstnodeid="16" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="5490" top="3330" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="13" values="0,1,2,3,4,5,6,7,8,9,10,11,12">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="-0.114244">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="17" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="17" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="18">
+   <BOUNDS type="Box" left="5475" top="4440" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5475" top="4440" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Width">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Output" dstnodeid="18" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>

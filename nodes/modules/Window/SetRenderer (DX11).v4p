@@ -1,8 +1,8 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="D:\Repositories\KIA-Dashboard18\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Window\SetRenderer (DX11).v4p" systemname="SetRenderer (DX11)" filename="C:\Users\Wuxi_Museum\Desktop\BoygroupMain\sub\SetRenderer (DX11).v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Window\SetRenderer (DX11).v4p" systemname="SetRenderer (DX11)" filename="C:\Users\Wuxi_Museum\Desktop\BoygroupMain\sub\SetRenderer (DX11).v4p" scrollx="0" scrolly="0">
    <BOUNDS height="8760" left="1680" top="5580" type="Window" width="12225">
    </BOUNDS>
-   <INFO author="colorsound" description="" tags="">
+   <INFO author="readme" description="" tags="">
    </INFO>
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
@@ -304,7 +304,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.5">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="74">
    <BOUNDS type="Node" left="105" top="105" width="2535" height="270">

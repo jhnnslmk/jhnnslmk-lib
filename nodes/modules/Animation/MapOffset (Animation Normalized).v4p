@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="D:\Repositories\KIA-KED13\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Animation\MapOffset (Animation Normalized).v4p" systemname="MapOffset (Animation Normalized)" filename="D:\Repositories\KIA-KED13\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Animation\MapOffset (Animation Normalized).v4p">
+   <PATCH nodename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Animation\MapOffset (Animation Normalized).v4p" systemname="MapOffset (Animation Normalized)" filename="D:\Repositories\KIA-KED13\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Animation\MapOffset (Animation Normalized).v4p">
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="840" top="1500" width="100" height="100">
    </BOUNDS>
@@ -75,7 +75,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="930" top="405" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -100,7 +100,7 @@
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.5">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.7">
    </PACK>
