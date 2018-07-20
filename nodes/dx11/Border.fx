@@ -47,12 +47,15 @@ vs2ps VS(VS_IN input)
 }
 
 float BorderWidth = 0.1f;
+float Alpha = 1;
 float4 PS(vs2ps In): SV_Target
 {
 	float2 scale = float2((tW._m11/tW._m00)*2, 1);
 	bool2 b = 1-abs(2*In.TexCd-1) < BorderWidth*scale;
 	
 	float4 col = lerp(Color, BorderColor, max(b.x, b.y));
+	
+	col.a *= Alpha;
 	
     return col;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="D:\Repositories\jhnnslmk-lib\modules\ColorPicker (Windows).v4p" systemname="ColorPicker (Windows)" filename="D:\Repositories\senckenberg-spielstation\Software\nodes\modules\ColorPicker (Windows).v4p">
+   <PATCH nodename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\System\ColorPicker (System Color).v4p" systemname="ColorPicker (Windows)" filename="D:\Repositories\senckenberg-spielstation\Software\nodes\modules\ColorPicker (Windows).v4p" scrollx="0" scrolly="1080">
    <BOUNDS type="Window" left="13515" top="4335" width="10770" height="8475">
    </BOUNDS>
    <PACK Name="addonpack" Version="36.0.0">
@@ -260,10 +260,8 @@
    </LINK>
    <LINK srcnodeid="6" srcpinname="Space" dstnodeid="22" dstpinname="Input 2">
    </LINK>
-   <PACK Name="dx11" Version="1.2">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
-   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="5" dstpinname="Input">
-   </LINK>
    <NODE id="16" systemname="Mouse (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Desktop)" componentmode="Hidden">
    <BOUNDS type="Node" left="510" top="630" width="100" height="100">
    </BOUNDS>
@@ -305,5 +303,7 @@
    <LINK srcnodeid="33" srcpinname="X" dstnodeid="18" dstpinname="X">
    </LINK>
    <LINK srcnodeid="33" srcpinname="Y" dstnodeid="15" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="5" dstpinname="Input">
    </LINK>
    </PATCH>
