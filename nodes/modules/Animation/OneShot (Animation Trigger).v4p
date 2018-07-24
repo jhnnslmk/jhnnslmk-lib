@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Animation\OneShot (Animation Trigger).v4p" systemname="OneShot (Animation Trigger)" filename="D:\Work\MESO\2018\DVAG\Deutschlandkarte\Repository\DVAG-Deutschlandkarte\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Animation\OneShot (Animation Trigger).v4p">
+   <PATCH nodename="C:\_LEMKI\HERE Repo\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Animation\OneShot (Animation Trigger).v4p" systemname="OneShot (Animation Trigger)" filename="D:\Work\MESO\2018\DVAG\Deutschlandkarte\Repository\DVAG-Deutschlandkarte\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Animation\OneShot (Animation Trigger).v4p">
    <NODE systemname="LinearFilter (Animation)" nodename="LinearFilter (Animation)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="900" top="3510" width="100" height="100">
    </BOUNDS>
@@ -29,7 +29,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1410" top="795" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="s">
    </PIN>
@@ -94,7 +94,7 @@
    </LINK>
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="5" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="21930" top="12435" width="5670" height="6825">
+   <BOUNDS type="Window" left="16335" top="8715" width="5670" height="6825">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
    </PACK>
@@ -111,7 +111,7 @@
    </PIN>
    <PIN pinname="FilterTime" visible="1">
    </PIN>
-   <PIN pinname="Invert" slicecount="1" values="0" visible="1">
+   <PIN pinname="Invert" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Go To Position" visible="1">
    </PIN>
@@ -167,7 +167,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3510" top="795" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

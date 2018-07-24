@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\DX11\TextFormatLayout (DX11 DirectWrite).v4p" systemname="TextFormatLayout (DX11 DirectWrite)" filename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\DX11\TextFormatLayout (DX11 DirectWrite).v4p">
-   <BOUNDS type="Window" left="23535" top="18645" width="22785" height="10185">
+   <PATCH nodename="C:\_LEMKI\HERE Repo\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\DX11\TextFormatLayout (DX11 DirectWrite).v4p" systemname="TextFormatLayout (DX11 DirectWrite)" filename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\DX11\TextFormatLayout (DX11 DirectWrite).v4p">
+   <BOUNDS type="Window" left="4725" top="4845" width="22785" height="10185">
    </BOUNDS>
    <NODE systemname="TextFormat (DirectWrite)" filename="%VVVV%\packs\dx11\nodes\plugins\directwrite\VVVV.Nodes.DirectWrite.dll" nodename="TextFormat (DirectWrite)" componentmode="Hidden" id="18">
    <BOUNDS type="Node" left="7275" top="2295" width="100" height="100">
@@ -31,6 +31,8 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1380" top="1065" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="Text">
+   </PIN>
    </NODE>
    <NODE id="13" systemname="IOBox (Enumerations)" componentmode="InABox" nodename="IOBox (Enumerations)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Horizontal Alignment|">
@@ -65,6 +67,8 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3300" top="1065" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="18">
+   </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Font Size">
    </LINK>
