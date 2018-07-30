@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="C:\_LEMKI\HERE Repo\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Animation\OneShot (Animation Trigger).v4p" systemname="OneShot (Animation Trigger)" filename="D:\Work\MESO\2018\DVAG\Deutschlandkarte\Repository\DVAG-Deutschlandkarte\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Animation\OneShot (Animation Trigger).v4p">
+   <PATCH nodename="D:\Work\MESO\2018\HERE\_LEMKI\HERE Repo\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Animation\OneShot (Animation Trigger).v4p" systemname="OneShot (Animation Trigger)" filename="D:\Work\MESO\2018\DVAG\Deutschlandkarte\Repository\DVAG-Deutschlandkarte\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Animation\OneShot (Animation Trigger).v4p" scrollx="330" scrolly="0">
    <NODE systemname="LinearFilter (Animation)" nodename="LinearFilter (Animation)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="900" top="3510" width="100" height="100">
    </BOUNDS>
@@ -58,6 +58,8 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Set">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="5">
@@ -185,9 +187,9 @@
    <LINK srcnodeid="5" srcpinname="Down Edge" dstnodeid="7" dstpinname="Reset">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="11">
-   <BOUNDS type="Box" left="3840" top="4410" width="480" height="480">
+   <BOUNDS type="Box" left="3940" top="4250" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="3840" top="4410" width="0" height="0">
+   <BOUNDS type="Node" left="3940" top="4250" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -201,5 +203,37 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="7" srcpinname="Halfway" dstnodeid="11" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="FlipFlop (Animation)" nodename="FlipFlop (Animation)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="4810" top="3870" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="13">
+   <BOUNDS type="Box" left="4830" top="4280" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4830" top="4280" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Output" dstnodeid="13" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Halfway" dstnodeid="12" dstpinname="Set">
    </LINK>
    </PATCH>
