@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\DX11\TimeSemantic.v4p" systemname="TimeSemantic" filename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\DX11\TimeSemantic.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha36.1.dtd" >
+   <PATCH nodename="D:\Repositories\here-demo\vvvv\vvvv_50alpha36.1_x64\packs\jhnnslmk-lib\nodes\modules\DX11\TimeSemantic.v4p" systemname="TimeSemantic" filename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\DX11\TimeSemantic.v4p">
    <NODE systemname="Semantics (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Semantics (DX11.Layer)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1110" top="2205" width="100" height="100">
    </BOUNDS>
@@ -74,8 +74,10 @@
    </NODE>
    <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="1" dstpinname="Semantic">
    </LINK>
-   <PACK Name="dx11" Version="1.3.1">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.10">
    </PACK>
    </PATCH>

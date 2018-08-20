@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\DX11\Text (DX11 DirectWrite Draw).v4p" systemname="Text (DX11 DirectWrite Draw)" filename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\DX11\Text (DX11 DirectWrite Draw).v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha36.1.dtd" >
+   <PATCH nodename="D:\Repositories\here-demo\vvvv\vvvv_50alpha36.1_x64\packs\jhnnslmk-lib\nodes\modules\DX11\Text (DX11 DirectWrite Draw).v4p" systemname="Text (DX11 DirectWrite Draw)" filename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\DX11\Text (DX11 DirectWrite Draw).v4p">
    <NODE systemname="Text (DX11.Layer Advanced)" filename="%VVVV%\packs\dx11\nodes\plugins\text\VVVV.DX11.Nodes.Text.dll" nodename="Text (DX11.Layer Advanced)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1500" top="6030" width="100" height="100">
    </BOUNDS>
@@ -222,7 +222,7 @@
    </NODE>
    <LINK srcnodeid="20" srcpinname="Output Enum" dstnodeid="2" dstpinname="Word Wrapping">
    </LINK>
-   <PACK Name="dx11" Version="1.3.1">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.7">
    </PACK>
@@ -285,13 +285,15 @@
    <LINK srcnodeid="21" srcpinname="Output Enum" dstnodeid="2" dstpinname="Font Weight">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="22" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="8010" top="4995" width="795" height="240">
+   <BOUNDS type="Box" left="7245" top="5835" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="8010" top="4995" width="0" height="0">
+   <BOUNDS type="Node" left="7245" top="5835" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Text Layout|">
    </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="22" dstpinname="Input Node">
    </LINK>
+   <PACK Name="vvvv-Message" Version="2.9.10">
+   </PACK>
    </PATCH>

@@ -4,7 +4,8 @@ float4x4 tWVP : WORLDVIEWPROJECTION;
 float4x4 tWV : WORLDVIEW;
 
 float Alpha = 1;
-float4 Color <bool color=true;> = {1, 1, 1, 1};
+float4 BoxColor <bool color=true;> = {0, 0, 0, 1};
+float4 OutlineColor <bool color=true;> = {1, 1, 1, 1};
 
 struct vsin
 {
@@ -110,9 +111,14 @@ void GS_Diag(triangle vs2gs input[3], inout LineStream<psIn> gsout)
 	
 }
 
-float4 PS(psIn input): SV_Target
+float4 PSBox(psIn input): SV_Target
 {
-    return Color * float4(1,1,1,Alpha);
+    return BoxColor * float4(1,1,1,Alpha);
+}
+
+float4 PSOutline(psIn input): SV_Target
+{
+    return OutlineColor * float4(1,1,1,Alpha);
 }
 
 technique10 RenderNoDiagonals
@@ -121,7 +127,22 @@ technique10 RenderNoDiagonals
 	{
 		SetVertexShader( CompileShader( vs_4_0, VS_Pass() ) );
 		SetGeometryShader( CompileShader( gs_4_0, GS_Diag() ) );
-		SetPixelShader( CompileShader( ps_4_0, PS() ) );
+		SetPixelShader( CompileShader( ps_4_0, PSOutline() ) );
+	}
+}
+
+technique10 RenderBoth
+{
+	pass P0
+	{
+		SetVertexShader( CompileShader( vs_4_0, VS() ) );
+		SetPixelShader( CompileShader( ps_4_0, PSBox() ) );
+	}
+	pass P1
+	{
+		SetVertexShader( CompileShader( vs_4_0, VS_Pass() ) );
+		SetGeometryShader( CompileShader( gs_4_0, GS_Diag() ) );
+		SetPixelShader( CompileShader( ps_4_0, PSOutline() ) );
 	}
 }
 
@@ -130,6 +151,13 @@ technique10 Render
 	pass P0
 	{
 		SetVertexShader( CompileShader( vs_4_0, VS() ) );
-		SetPixelShader( CompileShader( ps_4_0, PS() ) );
+		SetPixelShader( CompileShader( ps_4_0, PSBox() ) );
 	}
 }
+
+
+
+
+
+
+

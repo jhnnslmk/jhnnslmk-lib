@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="D:\Repositories\KIA-KED13\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Value\MinusPlus (Value).v4p" systemname="MinusPlus (Value)" filename="D:\Repositories\KIA-KED13\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Value\MinusPlus (Value).v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha36.1.dtd" >
+   <PATCH nodename="D:\Repositories\here-demo\vvvv\vvvv_50alpha36.1_x64\packs\jhnnslmk-lib\nodes\modules\Value\MinusPlus (Value).v4p" systemname="MinusPlus (Value)" filename="D:\Repositories\KIA-KED13\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Value\MinusPlus (Value).v4p" scrollx="0" scrolly="-360">
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="0">
    <BOUNDS type="Node" left="465" top="465" width="100" height="100">
    </BOUNDS>
@@ -56,7 +56,7 @@
    </LINK>
    <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Input 2">
    </LINK>
-   <BOUNDS type="Window" left="27375" top="20220" width="3270" height="3960">
+   <BOUNDS type="Window" left="27375" top="20220" width="8505" height="4410">
    </BOUNDS>
    <NODE systemname="Reverse (Spreads Vector)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Reverse (Spreads Vector)" componentmode="Hidden" id="4">
    <BOUNDS type="Node" left="465" top="2040" width="100" height="100">
@@ -100,6 +100,8 @@
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
-   <INFO author="readme" description="" tags="">
+   <INFO author="readme" description="" tags="PlusMinus">
    </INFO>
+   <PACK Name="vvvv-Message" Version="2.9.10">
+   </PACK>
    </PATCH>

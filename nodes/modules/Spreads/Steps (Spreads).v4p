@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\Steps (Spreads).v4p" systemname="Steps (Spreads)" filename="D:\Repositories\Karlsruhe-Medienfassade\Software\nodes\modules\Steps (Spreads).v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha36.1.dtd" >
+   <PATCH nodename="D:\Repositories\here-demo\vvvv\vvvv_50alpha36.1_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\Steps (Spreads).v4p" systemname="Steps (Spreads)" filename="D:\Repositories\Karlsruhe-Medienfassade\Software\nodes\modules\Steps (Spreads).v4p">
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="4410" top="3195" width="100" height="100">
    </BOUNDS>
@@ -87,9 +87,9 @@
    <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3705" top="1635" width="795" height="240">
+   <BOUNDS type="Box" left="3225" top="1575" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3705" top="1635" width="0" height="0">
+   <BOUNDS type="Node" left="3225" top="1575" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -104,9 +104,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Input 1">
-   </LINK>
-   <PACK Name="dx11" Version="1.3.1">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
@@ -162,4 +160,24 @@
    </NODE>
    <LINK srcnodeid="17" srcpinname="Output" dstnodeid="18" dstpinname="Y Input Value">
    </LINK>
+   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="2370" top="3030" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2370" top="3030" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="19" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="19" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="1" dstpinname="Input 1">
+   </LINK>
+   <PACK Name="vvvv-Message" Version="2.9.10">
+   </PACK>
    </PATCH>
