@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.5.dtd" >
-   <PATCH nodename="D:\Repositories\moovel-iwanttobeanav\Software\nodes\modules\Camera (Transform Orbit-Fly).v4p" systemname="Camera (Transform Orbit-Fly)" filename="C:\Users\Natan\Desktop\Camera\Camera (Transform Orbit-Fly).v4p" scrollx="630" scrolly="960">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha36.1.dtd" >
+   <PATCH nodename="D:\Repositories\here-demo\vvvv\vvvv_50alpha36.1_x64\packs\jhnnslmk-lib\nodes\modules\Transform\Camera (Transform Orbit Fly).v4p" systemname="Camera (Transform Orbit-Fly)" filename="C:\Users\Natan\Desktop\Camera\Camera (Transform Orbit-Fly).v4p" scrollx="630" scrolly="960">
    <BOUNDS type="Window" left="360" top="7665" width="23580" height="13380">
    </BOUNDS>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="121" systemname="IOBox (Node)">
@@ -105,7 +105,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.25">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Camera Speed|">
    </PIN>
@@ -2854,7 +2854,7 @@
    <LINKPOINT x="2875" y="2778">
    </LINKPOINT>
    </LINK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <LINK srcnodeid="954" srcpinname="W" dstnodeid="192" dstpinname="Input 1">
    </LINK>
@@ -2958,17 +2958,7 @@
    </LINK>
    <LINK srcnodeid="960" srcpinname="Y Output Value" dstnodeid="143" dstpinname="Input 3">
    </LINK>
-   <NODE id="963" systemname="Keyboard (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Window)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="18600" top="1155" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="15390" top="0" width="2400" height="1800">
-   </BOUNDS>
-   <BOUNDS type="Window" left="0" top="0" width="6000" height="4500">
-   </BOUNDS>
-   <PIN pinname="Device" visible="1">
-   </PIN>
-   </NODE>
-   <NODE id="964" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <NODE id="964" systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="19695" top="1335" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="19695" top="1335" width="2400" height="1800">
@@ -2978,8 +2968,20 @@
    <PIN pinname="Device" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="963" srcpinname="Device" dstnodeid="933" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="964" srcpinname="Device" dstnodeid="934" dstpinname="Input Node">
    </LINK>
+   <NODE id="965" systemname="Keyboard (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Window)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="18600" top="1155" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15390" top="0" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="0" width="6000" height="4500">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="965" srcpinname="Device" dstnodeid="933" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.5">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.10">
+   </PACK>
    </PATCH>

@@ -1852,7 +1852,7 @@
    </LINK>
    <LINK srcnodeid="214" srcpinname="Layer" dstnodeid="41" dstpinname="Layer 11">
    </LINK>
-   <NODE systemname="LineStrip (DX11 Constant)" filename="%VVVV%\packs\jhnnslmk-lib\nodes\modules\DX11\LineStrip (DX11 Constant).v4p" nodename="LineStrip (DX11 Constant)" componentmode="InAWindow" id="277">
+   <NODE systemname="LineStrip (DX11 Constant)" filename="%VVVV%\packs\jhnnslmk-lib\nodes\modules\DX11\LineStrip (DX11 Constant).v4p" nodename="LineStrip (DX11 Constant)" componentmode="Hidden" id="277">
    <BOUNDS type="Node" left="5205" top="9360" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform In" visible="1">
