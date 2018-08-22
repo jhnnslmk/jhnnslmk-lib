@@ -2970,7 +2970,11 @@
    </NODE>
    <LINK srcnodeid="964" srcpinname="Device" dstnodeid="934" dstpinname="Input Node">
    </LINK>
-   <NODE id="965" systemname="Keyboard (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Window)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <PACK Name="dx11" Version="1.0.5">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.10">
+   </PACK>
+   <NODE id="966" systemname="Keyboard (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Window)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="18600" top="1155" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="15390" top="0" width="2400" height="1800">
@@ -2978,10 +2982,6 @@
    <BOUNDS type="Window" left="0" top="0" width="6000" height="4500">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="965" srcpinname="Device" dstnodeid="933" dstpinname="Input Node">
+   <LINK srcnodeid="966" srcpinname="Device" dstnodeid="933" dstpinname="Input Node">
    </LINK>
-   <PACK Name="dx11" Version="1.0.5">
-   </PACK>
-   <PACK Name="vvvv-Message" Version="2.9.10">
-   </PACK>
    </PATCH>

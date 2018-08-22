@@ -1,0 +1,133 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha36.1.dtd" >
+   <PATCH nodename="D:\Repositories\here-demo\vvvv\vvvv_50alpha36.1_x64\packs\jhnnslmk-lib\nodes\modules\String\Escape (String).v4p" systemname="Escape (String)" filename="D:\Repositories\here-demo\vvvv\vvvv_50alpha36.1_x64\packs\jhnnslmk-lib\nodes\modules\String\Escape (String).v4p">
+   <NODE id="0" nodename="Substitute (String)" systemname="Substitute (String)">
+   <BOUNDS height="270" left="510" top="2805" type="Node" width="1560">
+   </BOUNDS>
+   <PIN pinname="From" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="1" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="1260" top="2310" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="8715" top="8445" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="420" left="1260" top="2310" type="Box" width="690">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show SliceIndex" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   <PIN pinname="Show Characters [#0..#32,#127]" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="2" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="2025" top="2310" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="9015" top="8745" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="390" left="2025" top="2310" type="Box" width="750">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show SliceIndex" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="\&apos;">
+   </PIN>
+   <PIN pinname="Show Characters [#0..#32,#127]" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   </NODE>
+   <NODE id="3" nodename="SpellValue (String)" systemname="SpellValue (String)">
+   <BOUNDS height="270" left="1260" top="1995" type="Node" width="795">
+   </BOUNDS>
+   <PIN pinname="Mode" slicecount="1" values="Ascii">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="4" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1260" top="1395" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="160" left="11385" top="4605" type="Window" width="215">
+   </BOUNDS>
+   <BOUNDS height="555" left="1260" top="1395" type="Box" width="540">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show SliceIndex" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="39">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   </NODE>
+   <NODE id="5" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <BOUNDS type="Box" left="510" top="395" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="510" top="395" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="0" dstpinname="Input">
+   </LINK>
+   <LINK dstnodeid="0" dstpinname="From" linkstyle="PolyLine" srcnodeid="1" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="0" dstpinname="To" linkstyle="PolyLine" srcnodeid="2" srcpinname="Output String">
+   </LINK>
+   <NODE id="6" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   <BOUNDS type="Box" left="510" top="3575" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="510" top="3575" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="6" dstpinname="Input String">
+   </LINK>
+   <LINK dstnodeid="1" dstpinname="Input String" linkstyle="VHV" srcnodeid="3" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Input" srcnodeid="4" srcpinname="Y Output Value">
+   </LINK>
+   <BOUNDS type="Window" left="32520" top="23190" width="4500" height="4980">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.0.5">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.10">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   </PATCH>
