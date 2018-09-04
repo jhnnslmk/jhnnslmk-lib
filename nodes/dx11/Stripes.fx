@@ -23,6 +23,7 @@ struct psInputTextured
 {
 	float4 posScreen : SV_Position;
 	float4 uv: TEXCOORD0;
+	float4 uvOrig: TEXCOORD1;
 };
 
 Texture2D inputTexture <string uiname="Texture";>;
@@ -58,6 +59,7 @@ psInputTextured VS_Textured(vsInputTextured input)
 	psInputTextured output;
 	output.posScreen = mul(input.posObject,mul(tW,tVP));
 	//	output.posScreen = mul(input.posObject, mul(tW,tV));
+	output.uvOrig = input.uv;
 	output.uv = mul(input.uv, tTex);
 	return output;
 }
@@ -65,15 +67,17 @@ psInputTextured VS_Textured(vsInputTextured input)
 float Time : TIME;
 float Scale;
 bool Direction;
+bool UseTime = true;
 
 float4 PS_Textured(psInputTextured input): SV_Target
 {
-	float2 uv = input.uv;
+	float2 uv = input.uvOrig;
 	uv = (Direction) ? uv.yx : uv.xy;
 	float4 col = inputTexture.Sample(linearSampler,input.uv.xy) * cAmb;
 	
+	float t = (UseTime) ? Time : 1000;
 	col.a *= smoothstep(0.0f, 0.5f, 1-abs(2*(uv.y-0.5f)));
-	col.a *= ((1-uv.x * Scale + Time) % 1) > 0.5f;
+	col.a *= ((1-uv.x * Scale + t) % 1) > 0.5f;
 	
 	col.a *= Alpha;
 	return col;
