@@ -10,7 +10,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="-1" top="-1" width="3100" height="3100">
+   <BOUNDS type="Window" left="37200" top="10650" width="4500" height="4065">
    </BOUNDS>
    <PACK Name="dx11" Version="1.0.5">
    </PACK>
@@ -59,6 +59,8 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Spreadcount">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Input 2">
    </LINK>
@@ -79,5 +81,23 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Output" dstnodeid="4" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="5">
+   <BOUNDS type="Box" left="2895" top="2010" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2895" top="2010" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|End [|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="5" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
