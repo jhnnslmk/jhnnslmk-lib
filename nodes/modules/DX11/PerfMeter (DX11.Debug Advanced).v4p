@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha36.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
    <PATCH nodename="D:\Repositories\here-demo\vvvv\vvvv_50alpha36.1_x64\packs\jhnnslmk-lib\nodes\modules\DX11\PerfMeter (DX11.Debug Advanced).v4p" systemname="PerfMeter (DX11.Debug Advanced)" filename="D:\Repositories\sbsn-friedland-lagerchronik\Software\Contributions\modules\PerfMeter (DX11.Debug Advanced).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="2850" top="6945" width="28245" height="23265">
+   <BOUNDS type="Window" left="19455" top="7020" width="33915" height="23265">
    </BOUNDS>
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
@@ -323,7 +323,7 @@
    <NODE systemname="PixelBillBoard (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="PixelBillBoard (DX11.Layer)" componentmode="Hidden" id="48">
    <BOUNDS type="Node" left="2370" top="12810" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Layer In" visible="1">
+   <PIN pinname="Layer In" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer Out" visible="1">
    </PIN>
@@ -338,9 +338,7 @@
    <BOUNDS type="Box" left="2370" top="12810">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="41" srcpinname="Layer Out" dstnodeid="48" dstpinname="Layer In">
-   </LINK>
-   <PACK Name="dx11" Version="1.0.5">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.10">
    </PACK>
@@ -1594,29 +1592,9 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Enabled (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Enabled (DX11.Layer)" componentmode="Hidden" id="235">
-   <BOUNDS type="Node" left="2370" top="13320" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2370" top="13320" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Layer In" visible="1">
-   </PIN>
-   <PIN pinname="Layer Out" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="48" srcpinname="Layer Out" dstnodeid="235" dstpinname="Layer In">
-   </LINK>
-   <LINK srcnodeid="234" srcpinname="Y Output Value" dstnodeid="235" dstpinname="Enabled" hiddenwhenlocked="1">
-   </LINK>
    <LINK srcnodeid="234" srcpinname="Y Output Value" dstnodeid="41" dstpinname="Enabled" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="234" srcpinname="Y Output Value" dstnodeid="161" dstpinname="Evaluate" hiddenwhenlocked="1">
-   </LINK>
    <LINK srcnodeid="234" srcpinname="Y Output Value" dstnodeid="212" dstpinname="Evaluate" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="235" srcpinname="Layer Out" dstnodeid="21" dstpinname="Input Node">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="236">
    <BOUNDS type="Box" left="16995" top="7725" width="795" height="240">
@@ -2007,5 +1985,85 @@
    <LINK srcnodeid="282" srcpinname="Y Output Value" dstnodeid="288" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="288" srcpinname="Output" dstnodeid="287" dstpinname="Y Input Value">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.5">
+   </PACK>
+   <LINK srcnodeid="48" srcpinname="Layer Out" dstnodeid="21" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="234" srcpinname="Y Output Value" dstnodeid="161" dstpinname="Evaluate">
+   </LINK>
+   <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="291">
+   <BOUNDS type="Node" left="3240" top="12150" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Layer Out" dstnodeid="291" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="291" srcpinname="Output" dstnodeid="48" dstpinname="Layer In">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="292">
+   <BOUNDS type="Box" left="28530" top="1110" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="28530" top="1110" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|FPS Only|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="292" srcpinname="Y Output Value" dstnodeid="291" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="Text (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\text\VVVV.DX11.Nodes.Text.dll" nodename="Text (DX11.Layer)" componentmode="Hidden" id="293">
+   <BOUNDS type="Node" left="5370" top="12825" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5370" top="12825" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="String" visible="1">
+   </PIN>
+   <PIN pinname="Font" visible="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="24">
+   </PIN>
+   <PIN pinname="Normalize" slicecount="1" values="None">
+   </PIN>
+   <PIN pinname="Horizontal Align" slicecount="1" values="Left">
+   </PIN>
+   <PIN pinname="Vertical Align" slicecount="1" values="Top">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="293" srcpinname="Layer" dstnodeid="291" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="FormatValue (String)" nodename="FormatValue (String)" componentmode="Hidden" id="295">
+   <BOUNDS type="Node" left="5580" top="12165" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="295" srcpinname="Output" dstnodeid="293" dstpinname="String">
+   </LINK>
+   <LINK srcnodeid="138" srcpinname="Output Enum" dstnodeid="293" dstpinname="Font">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="frames per second" dstnodeid="295" dstpinname="Input">
    </LINK>
    </PATCH>
