@@ -65,6 +65,7 @@ psInputTextured VS_Textured(vsInputTextured input)
 }
 
 float Time : TIME;
+float Speed = 1;
 float Scale;
 bool Direction;
 bool UseTime = true;
@@ -75,7 +76,7 @@ float4 PS_Textured(psInputTextured input): SV_Target
 	uv = (Direction) ? uv.yx : uv.xy;
 	float4 col = inputTexture.Sample(linearSampler,input.uv.xy) * cAmb;
 	
-	float t = (UseTime) ? Time : 1000;
+	float t = (UseTime) ? Time * Speed : 1000;
 	col.a *= smoothstep(0.0f, 0.5f, 1-abs(2*(uv.y-0.5f)));
 	col.a *= ((1-uv.x * Scale + t) % 1) > 0.5f;
 	
