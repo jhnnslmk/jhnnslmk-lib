@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
-   <PATCH nodename="D:\Repositories\here-demo\vvvv\vvvv_50alpha36.1_x64\packs\jhnnslmk-lib\nodes\modules\DX11\PerfMeter (DX11.Debug Advanced).v4p" systemname="PerfMeter (DX11.Debug Advanced)" filename="D:\Repositories\sbsn-friedland-lagerchronik\Software\Contributions\modules\PerfMeter (DX11.Debug Advanced).v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="D:\Repositories\here-realitycore\vvvv\vvvv_50alpha36.1_x64\packs\jhnnslmk-lib\nodes\modules\DX11\PerfMeter (DX11.Debug Advanced).v4p" systemname="PerfMeter (DX11.Debug Advanced)" filename="D:\Repositories\sbsn-friedland-lagerchronik\Software\Contributions\modules\PerfMeter (DX11.Debug Advanced).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="19455" top="7020" width="33915" height="23265">
    </BOUNDS>
    <PACK Name="addonpack" Version="36.0.0">
@@ -2049,6 +2049,8 @@
    </PIN>
    <PIN pinname="Vertical Align" slicecount="1" values="Top">
    </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="293" srcpinname="Layer" dstnodeid="291" dstpinname="Input 2">
    </LINK>
@@ -2065,5 +2067,7 @@
    <LINK srcnodeid="138" srcpinname="Output Enum" dstnodeid="293" dstpinname="Font">
    </LINK>
    <LINK srcnodeid="38" srcpinname="frames per second" dstnodeid="295" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="234" srcpinname="Y Output Value" dstnodeid="293" dstpinname="Enabled">
    </LINK>
    </PATCH>
