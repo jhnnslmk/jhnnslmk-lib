@@ -1,13 +1,13 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="D:\Repositories\jhnnslmk-lib\modules\TextureWriter (DX11).v4p" systemname="TextureWriter (DX11)" filename="D:\Repositories\senckenberg-infostation\Software\nodes\modules\TextureWriter (DX11).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="9720" top="12945" width="10575" height="9990">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
+   <PATCH nodename="D:\Repositories\here-realitycore\vvvv\vvvv_50alpha36.1_x64\packs\jhnnslmk-lib\nodes\modules\DX11\TextureWriter (DX11).v4p" systemname="TextureWriter (DX11)" filename="D:\Repositories\senckenberg-infostation\Software\nodes\modules\TextureWriter (DX11).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="9720" top="12945" width="12345" height="11475">
    </BOUNDS>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="Writer (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Writer (DX11.Texture 2d)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="600" top="5475" width="100" height="100">
+   <BOUNDS type="Node" left="600" top="6090" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="600" top="5475" width="3000" height="3000">
+   <BOUNDS type="Box" left="600" top="6090" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -37,7 +37,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4065" top="360" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Png">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Jpg">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="Bmp">
    </PIN>
@@ -63,9 +63,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="5">
-   <BOUNDS type="Node" left="1530" top="4590" width="100" height="100">
+   <BOUNDS type="Node" left="1530" top="4440" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="2018-10-18-11.48.16.5539_553_0">
    </PIN>
    <PIN pinname="Intersperse" slicecount="1" values="Dot">
    </PIN>
@@ -74,68 +74,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Gregorian (Astronomy Split)" nodename="Gregorian (Astronomy Split)" componentmode="Hidden" id="6">
-   <BOUNDS type="Node" left="2805" top="765" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Time" visible="1">
-   </PIN>
-   <PIN pinname="Millisecond" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="CurrentTime (Astronomy)" nodename="CurrentTime (Astronomy)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="2805" top="360" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="GMT" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="7" srcpinname="GMT" dstnodeid="6" dstpinname="Time">
-   </LINK>
-   <NODE systemname="TimeToString (String)" nodename="TimeToString (String)" componentmode="Hidden" id="8">
-   <BOUNDS type="Node" left="1545" top="2610" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Time" visible="1">
-   </PIN>
-   <PIN pinname="String" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="7" srcpinname="GMT" dstnodeid="8" dstpinname="Time">
-   </LINK>
-   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="9">
-   <BOUNDS type="Node" left="1545" top="3990" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Intersperse" slicecount="1" values="UnderScore">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Input 3" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="8" srcpinname="String" dstnodeid="9" dstpinname="Input 1">
-   </LINK>
-   <NODE systemname="FormatValue (String)" nodename="FormatValue (String)" componentmode="Hidden" id="10">
-   <BOUNDS type="Node" left="2805" top="1155" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Characters before Comma" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Leading Zeroes" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="6" srcpinname="Millisecond" dstnodeid="10" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="9" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="5" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="5" dstpinname="Input 2">
    </LINK>
    <NODE systemname="FormatValue (String)" nodename="FormatValue (String)" componentmode="Hidden" id="13">
@@ -146,10 +84,8 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="9" dstpinname="Input 3">
-   </LINK>
    <NODE systemname="MakePath (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="MakePath (String)" componentmode="Hidden" id="14">
-   <BOUNDS type="Node" left="780" top="4935" width="100" height="100">
+   <BOUNDS type="Node" left="780" top="5760" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -179,8 +115,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="15" srcpinname="Output String" dstnodeid="14" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="14" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="0" dstpinname="Filename">
    </LINK>
@@ -233,7 +167,7 @@
    <LINK srcnodeid="17" srcpinname="Output Enum" dstnodeid="18" dstpinname="Target Format">
    </LINK>
    <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="600" top="5880" width="100" height="100">
+   <BOUNDS type="Node" left="600" top="6450" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Up" visible="1">
    </PIN>
@@ -265,9 +199,9 @@
    <LINK srcnodeid="18" srcpinname="Texture Out" dstnodeid="0" dstpinname="Texture In">
    </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="21">
-   <BOUNDS type="Node" left="600" top="6360" width="100" height="100">
+   <BOUNDS type="Node" left="600" top="6810" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="600" top="6360" width="3000" height="3000">
+   <BOUNDS type="Box" left="600" top="6810" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -281,9 +215,9 @@
    <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="19" dstpinname="Reset">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22">
-   <BOUNDS type="Box" left="720" top="6750" width="795" height="240">
+   <BOUNDS type="Box" left="720" top="7200" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="720" top="6750" width="0" height="0">
+   <BOUNDS type="Node" left="720" top="7200" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -323,11 +257,11 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="21" srcpinname="Output 1" dstnodeid="25" dstpinname="Y Input Value">
-   <LINKPOINT x="589" y="7125">
+   <LINKPOINT x="589" y="7461">
    </LINKPOINT>
-   <LINKPOINT x="69" y="7125">
+   <LINKPOINT x="69" y="7350">
    </LINKPOINT>
-   <LINKPOINT x="41" y="1020">
+   <LINKPOINT x="41" y="1134">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Index">
@@ -351,9 +285,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="29">
-   <BOUNDS type="Box" left="2400" top="6555" width="795" height="240">
+   <BOUNDS type="Box" left="2400" top="7020" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2400" top="6555" width="0" height="0">
+   <BOUNDS type="Node" left="2400" top="7020" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -393,5 +327,91 @@
    <LINK srcnodeid="2" srcpinname="Output Enum" dstnodeid="3" dstpinname="Enum">
    </LINK>
    <LINK srcnodeid="3" srcpinname="String Value" dstnodeid="4" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="32">
+   <BOUNDS type="Node" left="1005" top="4920" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" visible="1" values="vvvv-">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="32" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="33">
+   <BOUNDS type="Box" left="1725" top="330" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1725" top="330" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="vvvv-">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Prefix">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Output String" dstnodeid="32" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Output" dstnodeid="14" dstpinname="Input 2">
+   </LINK>
+   <PACK Name="dx11" Version="1.3.1">
+   </PACK>
+   <PACK Name="dx11.particles" Version="1.0.5">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.10">
+   </PACK>
+   <NODE systemname="Date (Astronomy)" filename="%VVVV%\addonpack\lib\nodes\plugins\Date.dll" nodename="Date (Astronomy)" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="7530" top="6240" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7530" top="6240" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Culture Info" slicecount="1" values="de-DE">
+   </PIN>
+   <PIN pinname="Current Date" visible="1">
+   </PIN>
+   <PIN pinname="Format" visible="1">
+   </PIN>
+   <PIN pinname="Update" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="37">
+   <BOUNDS type="Box" left="7545" top="5535" width="2295" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7545" top="5535" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="yyyy-MM-dd-HH.mm.ss.ffff">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="37" srcpinname="Output String" dstnodeid="34" dstpinname="Format">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="38">
+   <BOUNDS type="Node" left="1545" top="3990" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="UnderScore">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Output" dstnodeid="5" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="38" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="34" srcpinname="Current Date" dstnodeid="38" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="38" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="34" dstpinname="Update">
    </LINK>
    </PATCH>
