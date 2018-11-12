@@ -47,28 +47,49 @@ vs2ps VS(VS_IN input)
 }
 
 float BorderWidth = 0.1f;
+float2 Scale = 1.0f.xx;
 float Alpha = 1;
-float4 PS(vs2ps In): SV_Target
+float4x4 InvAspectRatio;
+
+bool Border(float2 TexCd, float2 BorderWidth)
 {
-	float2 scale = float2((tW._m11/tW._m00)*2, 1);
-	bool2 b = 1-abs(2*In.TexCd-1) < BorderWidth*scale;
+	float2 uv = (TexCd.xy-0.5f)*2;
+	bool2 b = abs(uv*Scale) > Scale-BorderWidth;
 	
-	float4 col = lerp(Color, BorderColor, max(b.x, b.y));
-	
-	col.a *= Alpha;
-	
+	return max(b.x, b.y);
+}
+
+float4 PS_NoAspect(vs2ps In): SV_Target
+{	
+	float4 col = lerp(Color, BorderColor, Border(In.TexCd.xy, BorderWidth.xx));	
+	col.a *= Alpha;	
     return col;
 }
 
-technique10 Border
+float4 PS_Aspect(vs2ps In): SV_Target
+{	
+	float4 col = lerp(Color, BorderColor, Border(In.TexCd.xy, mul(float4(BorderWidth.xx, 0, 1), InvAspectRatio).xy));
+	col.a *= Alpha;
+    return col;
+}
+
+technique10 BorderNoAspect
 {
 	pass P0
 	{
 		SetVertexShader( CompileShader( vs_4_0, VS() ) );
-		SetPixelShader( CompileShader( ps_4_0, PS() ) );
+		SetPixelShader( CompileShader( ps_4_0, PS_NoAspect() ) );
 	}
 }
 
+technique10 BorderAspect
+{
+	pass P0
+	{
+		SetVertexShader( CompileShader( vs_4_0, VS() ) );
+		SetPixelShader( CompileShader( ps_4_0, PS_Aspect() ) );
+	}
+}
 
 
 
