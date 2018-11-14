@@ -1,0 +1,55 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
+   <PATCH nodename="D:\Repositories\here-realitycore\vvvv\vvvv_50beta37_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\UpDownLeftRight (Spreads 2d).v4p" systemname="UpDownLeftRight (Spreads 2d)" filename="D:\Repositories\here-realitycore\vvvv\vvvv_50beta37_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\UpDownLeftRight (Spreads 2d).v4p">
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="0">
+   <BOUNDS type="Node" left="675" top="390" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="675" top="390" width="1395" height="1185">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="8" values="0,1,0,-1,-1,0,1,0">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0|">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="33540" top="19275" width="3765" height="4020">
+   </BOUNDS>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="675" top="1815" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="675" top="1815" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Up Down Left Right|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Y Input Value">
+   </LINK>
+   <PACK Name="dx11" Version="1.3.1">
+   </PACK>
+   <PACK Name="dx11.particles" Version="1.0.5">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.10">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   </PATCH>

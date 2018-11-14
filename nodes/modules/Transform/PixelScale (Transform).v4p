@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="D:\Repositories\KIA-KED13\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Transform\PixelScale (Transform).v4p" systemname="PixelScale (Transform)" filename="D:\Repositories\KIA-KED13\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Transform\PixelScale (Transform).v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
+   <PATCH nodename="D:\Repositories\here-realitycore\vvvv\vvvv_50beta37_x64\packs\jhnnslmk-lib\nodes\modules\Transform\PixelScale (Transform).v4p" systemname="PixelScale (Transform)" filename="D:\Repositories\KIA-KED13\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Transform\PixelScale (Transform).v4p">
    <NODE id="0" nodename="IOBox (Node)" componentmode="InABox" systemname="IOBox (Node)" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="1500" top="1500" width="0" height="0">
    </BOUNDS>
@@ -125,7 +125,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" pintype="Configuration" values="Toggle">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" pintype="Input" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" pintype="Input" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" pintype="Configuration" values="||">
    </PIN>
@@ -218,24 +218,6 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <NODE id="5" systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="3720" top="2160" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="XY" visible="1" slicecount="2" pintype="Input" values="0.000488400488400488,0.00297176820208024">
-   </PIN>
-   <PIN pinname="Y" visible="1" pintype="Output">
-   </PIN>
-   <PIN pinname="X" visible="1" pintype="Output">
-   </PIN>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Tag" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   </NODE>
    <NODE id="6" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)" hiddenwhenlocked="0" managers="">
    <PIN pinname="Y Input Value" slicecount="2" visible="1" pintype="Input" values="1,1">
    </PIN>
@@ -322,20 +304,50 @@
    </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="1" dstpinname="XY">
    </LINK>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="5" dstpinname="XY">
-   </LINK>
    <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Switch">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="Y" dstnodeid="4" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Input 2">
    </LINK>
-   <BOUNDS type="Window" left="-1" top="-1" width="7230" height="6165">
+   <BOUNDS type="Window" left="24990" top="14490" width="11010" height="6165">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.0.5">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.7">
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="7">
+   <BOUNDS type="Node" left="7290" top="1455" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7290" top="1455" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Fit In / Fit Out|">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="6660" top="2670" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="4" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Index">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.5">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.10">
    </PACK>
    </PATCH>
