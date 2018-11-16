@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha36.1.dtd" >
-   <PATCH nodename="D:\Repositories\here-demo\vvvv\vvvv_50alpha36.1_x64\packs\jhnnslmk-lib\nodes\modules\System\FileChanged (System File).v4p" systemname="FileChanged (System File)" filename="D:\Repositories\here-demo\vvvv\vvvv_50alpha36.1_x64\packs\jhnnslmk-lib\nodes\modules\System\FileChanged (System File).v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
+   <PATCH nodename="D:\Repositories\here-realitycore\vvvv\vvvv_50beta37_x64\packs\jhnnslmk-lib\nodes\modules\System\FileChanged (System File).v4p" systemname="FileChanged (System File)" filename="D:\Repositories\here-demo\vvvv\vvvv_50alpha36.1_x64\packs\jhnnslmk-lib\nodes\modules\System\FileChanged (System File).v4p">
    <BOUNDS type="Window" left="14250" top="18945" width="9000" height="6000">
    </BOUNDS>
    <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="8">
@@ -109,7 +109,7 @@
    </PIN>
    <PIN pinname="Time" slicecount="1" values="0.5">
    </PIN>
-   <PIN pinname="Frames" slicecount="1" values="5">
+   <PIN pinname="Frames" slicecount="1" values="5" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="5" srcpinname="Output" dstnodeid="0" dstpinname="Set">
@@ -154,10 +154,30 @@
    </NODE>
    <LINK srcnodeid="3" srcpinname="Down Edge" dstnodeid="10" dstpinname="Y Input Value">
    </LINK>
-   <PACK Name="dx11" Version="1.0.5">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.10">
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="11">
+   <BOUNDS type="Box" left="3330" top="2265" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3330" top="2265" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Frames">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Frames">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.5">
    </PACK>
    </PATCH>
