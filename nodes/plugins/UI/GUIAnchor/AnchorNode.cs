@@ -42,6 +42,9 @@ namespace VVVV.Nodes.UI
 		[Input("Element", Order = 4)]
         public IDiffSpread<UI.Alignment> FInElementAlign;
 		
+		[Input("AspectRatio", Order = 5)]
+        public IDiffSpread<UI.AspectRatio> FInAspectRatio;
+		
 		[Input("Resolution", EnumName = "ResolutionManager", Order = 5)]
         public IDiffSpread<EnumEntry> FInResolution;
 		
@@ -72,8 +75,26 @@ namespace VVVV.Nodes.UI
 			
 			for (int i = 0; i < SpreadMax; i++)
 			{
+
+				
+				Vector2D _res = ResolutionManager.GetSize(FInResolution[0].Name);
+				
+				Vector2D _aspect = new Vector2D(1, 1);
+				if (FInAspectRatio[i] == UI.AspectRatio.None)
+				{
+					_aspect = new Vector2D(1,1);
+				}
+				else if (FInAspectRatio[i] == UI.AspectRatio.FitIn)
+				{
+					_aspect = new Vector2D(1, _res.x/_res.y);
+				}
+				else if (FInAspectRatio[i] == UI.AspectRatio.FitOut)
+				{
+					_aspect = new Vector2D(1, _res.x/_res.y);
+				}
+				
 				Vector2D _element = UI.AlignmentVectors[(int)FInElementAlign[i]];
-				Vector2D _parent = UI.AlignmentVectors[(int)FInParentAlign[i]];
+				Vector2D _parent = UI.AlignmentVectors[(int)FInParentAlign[i]] * _aspect;
 				
 				UI.Canvas c = FInCanvas[i];
 				if (c == null) c = new UI.Canvas(2 * VMath.IdentityMatrix);
@@ -81,14 +102,14 @@ namespace VVVV.Nodes.UI
 				
 				m = VMath.Translate(new Vector3D(-1*_element*0.5f, 0));
 				
-				m *= VMath.Scale(new Vector3D(ResolutionManager.GetSize(FInResolution[0].Name) * FInSize[i], 1));
+				m *= VMath.Scale(new Vector3D(_res * FInSize[i] * _aspect, 1));
 //				FLogger.Log(LogType.Debug, FInResolution[0].Name);
 				
 				m *= VMath.Translate(c.Center);
 				
 				Vector2D offsetDirection = (FInParentAlign[i] == UI.Alignment.CenterCenter) ? new Vector2D(-1, -1) : _element;
-				offsetDirection = new Vector2D(-1, -1);
-				m *= VMath.Translate(new Vector3D((_parent*0.5f*c.Size-offsetDirection*ResolutionManager.GetSize(FInResolution[0].Name) * FInOffset[i]), 0));
+				offsetDirection = new Vector2D(-1, -1) * _aspect;
+				m *= VMath.Translate(new Vector3D((_parent*0.5f*c.Size-offsetDirection*_res * FInOffset[i]), 0));
 				
 				FOutTransform[i] = m;
 				FOutCanvas[i] = new UI.Canvas(m);

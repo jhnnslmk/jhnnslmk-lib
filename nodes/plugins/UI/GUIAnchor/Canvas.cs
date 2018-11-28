@@ -31,6 +31,13 @@ namespace VVVV.Nodes.UI
 			LeftBottom, CenterBottom, RightBottom
 		}
 		
+		public enum AspectRatio
+		{
+			None,
+			FitIn,
+			FitOut
+		}
+		
 		public class Canvas
 		{
 			public Matrix4x4 Matrix;
