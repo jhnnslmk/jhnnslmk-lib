@@ -61,14 +61,18 @@ bool Border(float2 TexCd, float2 BorderWidth)
 
 float4 PS_NoAspect(vs2ps In): SV_Target
 {	
-	float4 col = lerp(Color, BorderColor, Border(In.TexCd.xy, BorderWidth.xx));	
+	float4 col = texture2d.Sample(linearSampler, In.TexCd.xy) * Color;
+	col = lerp(col, BorderColor, Border(In.TexCd.xy, BorderWidth.xx));
+	
 	col.a *= Alpha;	
     return col;
 }
 
 float4 PS_Aspect(vs2ps In): SV_Target
 {	
-	float4 col = lerp(Color, BorderColor, Border(In.TexCd.xy, mul(float4(BorderWidth.xx, 0, 1), InvAspectRatio).xy));
+	float4 col = texture2d.Sample(linearSampler, In.TexCd.xy) * Color;
+	col = lerp(col, BorderColor, Border(In.TexCd.xy, BorderWidth.xx));
+	
 	col.a *= Alpha;
     return col;
 }
