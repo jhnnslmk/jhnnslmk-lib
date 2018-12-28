@@ -13,6 +13,7 @@ struct psInput
 {
     float4 posScreen : SV_Position;
     float4 uv: TEXCOORD0;
+	float4 uvOrig: TEXCOORD1;
 };
 
 cbuffer cbPerDraw : register(b0)
@@ -31,21 +32,32 @@ cbuffer cbPerObj : register( b1 )
 	float Alpha <float uimin=0.0; float uimax=1.0;> = 1; 
 };
 
+Texture2D inputTexture <string uiname="Texture";>;
+
+SamplerState linearSampler <string uiname="Sampler State";>
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Clamp;
+    AddressV = Clamp;
+};
+
 cbuffer cbTextureData : register(b2)
 {
-	float4x4 tTex <string uiname="Texture Transform"; bool uvspace=true; >;
+	float4x4 tTex <string uiname="Gradient Transform"; bool uvspace=true; >;
+	float4x4 tTexCol <string uiname="Texture Transform"; bool uvspace=true; >;
 };
 
 psInput VS(vsInput input)
 {
 	psInput output;
 	output.posScreen = mul(input.posObject,mul(tW,tVP));
+	output.uvOrig = mul(input.uv, tTexCol);
 	output.uv = mul(float4((input.uv.xy*2-1)*float2(1,-1),0,1),tTex)*0.5*float4(1,-1, 0, 1)+0.5;
 	return output;
 }
 
 float4 pGRAD(psInput input, uniform int interp,uniform bool radial):SV_TARGET{
-	float4 c=0;
+	float4 c=inputTexture.Sample(linearSampler, input.uvOrig.xy);
 //	float2 x0=mul(float4((input.uv.xy*2-1)*float2(1,-1),0,1),tTex).xy*0.5*float2(1,-1)+0.5;
 	float2 x0=input.uv.xy;
 	float fade=x0.x;
@@ -54,7 +66,7 @@ float4 pGRAD(psInput input, uniform int interp,uniform bool radial):SV_TARGET{
 	fade=sign(fade)*pow(abs(fade),Gamma);
 	if(ClampColor)fade=saturate(fade);
 	if(interp==1)fade=smoothstep(0,1,fade);
-	c=lerp(Color1,Color2,fade);
+	c*=lerp(Color1,Color2,fade);
 	
 	c.a *= Alpha;
     return c;
