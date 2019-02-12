@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.18.dtd" >
-   <PATCH nodename="D:\Airbus-AirBMW\Software\nodes\modules\UVPatternGenerator (DX11).v4p" systemname="UVPatternGenerator" filename="C:\Users\user\Desktop\UVPatternGenerator.v4p" scrollx="0" scrolly="-360">
-   <BOUNDS type="Window" left="9690" top="5310" width="5715" height="8835">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\PC3\Desktop\jhnnslmk\Repositories\ceasars\vvvv_50beta38.1_x64\packs\jhnnslmk-lib\nodes\modules\DX11\UVPatternGenerator (DX11).v4p" systemname="UVPatternGenerator" filename="C:\Users\user\Desktop\UVPatternGenerator.v4p" scrollx="0" scrolly="-360">
+   <BOUNDS type="Window" left="9690" top="5310" width="8670" height="8835">
    </BOUNDS>
    <NODE nodename="Group (DX11.Layer)" id="4" systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll">
    <BOUNDS type="Node" left="0" top="6000" width="0" height="0">
@@ -94,7 +94,7 @@
    </NODE>
    <LINK srcnodeid="22" srcpinname="Output" dstnodeid="19" dstpinname="Hue">
    </LINK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE systemname="Text (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\text\VVVV.DX11.Nodes.Text.dll" nodename="Text (DX11.Layer)" componentmode="Hidden" id="23">
    <BOUNDS type="Node" left="3285" top="5790" width="100" height="100">
@@ -374,50 +374,6 @@
    </NODE>
    <LINK srcnodeid="4" srcpinname="Layer Out" dstnodeid="3" dstpinname="Layer In">
    </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="52" systemname="IOBox (Node)" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Box" left="15" top="7260" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="15" top="7260" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Window" left="0" top="0" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="|Layer Out|">
-   </PIN>
-   <PIN pinname="Tag" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Pin Visibility" pintype="Configuration" slicecount="1" values="True">
-   </PIN>
-   <PIN pinname="SliceCount Mode" pintype="Configuration" slicecount="1" values="Input">
-   </PIN>
-   <PIN pinname="Columns" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Rows" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Pages" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Show SliceIndex" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Font" pintype="Configuration" slicecount="1" values="|Lucida Sans Unicode|">
-   </PIN>
-   <PIN pinname="Size" pintype="Configuration" slicecount="1" values="7">
-   </PIN>
-   <PIN pinname="Show Grid" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="SliceOffset" pintype="Input" visible="-1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Input Node" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Bin Size" pintype="Input" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Output Node" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Changed" pintype="Output" visible="-1">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   </NODE>
    <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="58">
    <BOUNDS type="Node" left="735" top="855" width="100" height="100">
    </BOUNDS>
@@ -579,7 +535,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="930" top="225" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="141">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="120">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -684,34 +640,18 @@
    </NODE>
    <LINK srcnodeid="87" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Enabled">
    </LINK>
-   <PACK Name="dx11" Version="1.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.10">
    </PACK>
    <LINK srcnodeid="58" srcpinname="Output" dstnodeid="85" dstpinname="Y Input Value">
-   </LINK>
-   <NODE systemname="Enabled (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Enabled (DX11.Layer)" componentmode="Hidden" id="88">
-   <BOUNDS type="Node" left="15" top="6825" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="15" top="6825" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Layer In" visible="1">
-   </PIN>
-   <PIN pinname="Layer Out" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="3" srcpinname="Layer Out" dstnodeid="88" dstpinname="Layer In">
-   </LINK>
-   <LINK srcnodeid="88" srcpinname="Layer Out" dstnodeid="52" dstpinname="Input Node">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="89">
    <BOUNDS type="Box" left="5010" top="255" width="480" height="480">
    </BOUNDS>
    <BOUNDS type="Node" left="5010" top="255" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -723,7 +663,43 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="88" dstpinname="Enabled">
+   <NODE systemname="Renderer (DX11 TempTarget)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 TempTarget)" componentmode="Hidden" id="90">
+   <BOUNDS type="Node" left="15" top="6885" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15" top="6885" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Buffers" visible="1">
+   </PIN>
+   <PIN pinname="Texture SizeXY" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Layer Out" dstnodeid="90" dstpinname="Layer">
    </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="91">
+   <BOUNDS type="Box" left="1275" top="7590" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1275" top="7590" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Buffers">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="90" srcpinname="Buffers" dstnodeid="91" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="45" srcpinname="Y Output Value" dstnodeid="90" dstpinname="Texture SizeXY">
+   </LINK>
+   <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="90" dstpinname="Enabled">
+   </LINK>
+   <PACK Name="dx11-vvvv-girlpower" Version="33.0">
+   </PACK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
+   <PACK Name="VVVV.Packs.Image" Version="0.2.0">
+   </PACK>
    </PATCH>
