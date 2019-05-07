@@ -4,6 +4,7 @@
 //@credits:
 
 Texture2D texture2d : PREVIOUS;
+float4x4 tTex <string uiname="Texture Transform"; bool uvspace=true; >;
 
 StructuredBuffer<float4> ColorBuffer;
 StructuredBuffer<float> BreakPointBuffer;
@@ -27,6 +28,8 @@ float4 PS(psInput input) : SV_Target
 	uint size, stride;
 	ColorBuffer.GetDimensions(size, stride);
 	
+	float2 uv = mul(input.uv, tTex);
+	
 	float4 c = 0.0f.xxxx;
 	
 	if (size == 1) c = ColorBuffer[0];
@@ -37,7 +40,7 @@ float4 PS(psInput input) : SV_Target
 		{
 //			float f = (i%2==1) ? 2 : 0.5f;
 //			f = 2;
-			c += (input.uv.x >= BreakPointBuffer[i] && input.uv.x <= BreakPointBuffer[i+1]) * lerp(ColorBuffer[i], ColorBuffer[i+1], smoothstep(BreakPointBuffer[i], BreakPointBuffer[i+1], input.uv.x));
+			c += (uv.x >= BreakPointBuffer[i] && uv.x <= BreakPointBuffer[i+1]) * lerp(ColorBuffer[i], ColorBuffer[i+1], smoothstep(BreakPointBuffer[i], BreakPointBuffer[i+1], uv.x));
 		}
 	}
 	
