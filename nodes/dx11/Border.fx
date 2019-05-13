@@ -49,12 +49,13 @@ vs2ps VS(VS_IN input)
 float BorderWidth = 0.1f;
 float2 Scale = 1.0f.xx;
 float Alpha = 1;
-float4x4 InvAspectRatio;
+float2 InvAspectRatio = {1, 1};
 
 bool Border(float2 TexCd, float2 BorderWidth)
 {
 	float2 uv = (TexCd.xy-0.5f)*2;
-	bool2 b = abs(uv*Scale) > Scale-BorderWidth;
+	float2 s = Scale*InvAspectRatio;
+	bool2 b = abs(uv*s) > s-BorderWidth;
 	
 	return max(b.x, b.y);
 }
