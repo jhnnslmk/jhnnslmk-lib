@@ -23,6 +23,7 @@ struct psInput
 };
 
 float4 Tint <bool color = true;> = {1,1,1,1};
+bool Clamping <string uiname="Clamp";> = false;
 float4 PS(psInput input) : SV_Target
 {
 	uint size, stride;
@@ -40,7 +41,9 @@ float4 PS(psInput input) : SV_Target
 		{
 //			float f = (i%2==1) ? 2 : 0.5f;
 //			f = 2;
-			c += (uv.x >= BreakPointBuffer[i] && uv.x <= BreakPointBuffer[i+1]) * lerp(ColorBuffer[i], ColorBuffer[i+1], smoothstep(BreakPointBuffer[i], BreakPointBuffer[i+1], uv.x));
+			bool clampArea = (Clamping == true) ? (uv.x >= BreakPointBuffer[i] && uv.x <= BreakPointBuffer[i+1]) : true;
+			c += clampArea * lerp(ColorBuffer[i], ColorBuffer[i+1], smoothstep(BreakPointBuffer[i], BreakPointBuffer[i+1], uv.x));
+			
 		}
 	}
 	
