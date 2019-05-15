@@ -1,0 +1,99 @@
+//@author: vux
+//@help: template for texture fx
+//@tags: texture
+//@credits: 
+
+Texture2D texture2d : PREVIOUS;
+
+SamplerState linearSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Clamp;
+    AddressV = Clamp;
+};
+
+struct psInput
+{
+	float4 p : SV_Position;
+	float2 uv : TEXCOORD0;
+};
+
+interface iChannel{
+   float Channel(float4 c); 
+};
+class cRedChannel : iChannel{
+   float Channel(float4 c) { 
+		return c.r;
+	}
+};
+class cGreenChannel : iChannel{
+   float Channel(float4 c) { 
+	   return c.g;
+   }
+};
+class cBlueChannel : iChannel{
+   float Channel(float4 c) { 
+	   return c.b;
+   }
+};
+class cAlphaChannel : iChannel{
+   float Channel(float4 c) { 
+	   return c.a;
+   }
+};
+
+cRedChannel Red;
+cGreenChannel Green;
+cBlueChannel Blue;
+cAlphaChannel Alpha;
+iChannel ControlChannel <string uiname="Control Channel";string linkclass="Red,Green,Blue,Alpha";> = Red;
+
+float Value = 0.0f;
+float4 PS_GE(psInput input) : SV_Target
+{
+	float4 c = texture2d.Sample(linearSampler,input.uv);
+	
+	return ControlChannel.Channel(c) >= Value;
+}
+
+float4 PS_LE(psInput input) : SV_Target
+{
+	float4 c = texture2d.Sample(linearSampler,input.uv);
+	
+	return ControlChannel.Channel(c) <= Value;
+}
+
+float4 PS_E(psInput input) : SV_Target
+{
+	float4 c = texture2d.Sample(linearSampler,input.uv);
+	
+	return ControlChannel.Channel(c) == Value;
+}
+
+technique10 GreaterEqual
+{
+	pass P0
+	{
+		SetPixelShader(CompileShader(ps_5_0,PS_GE()));
+	}
+}
+
+technique10 LowerEqual
+{
+	pass P0
+	{
+		SetPixelShader(CompileShader(ps_5_0,PS_LE()));
+	}
+}
+
+
+technique10 Equal
+{
+	pass P0
+	{
+		SetPixelShader(CompileShader(ps_5_0,PS_E()));
+	}
+}
+
+
+
