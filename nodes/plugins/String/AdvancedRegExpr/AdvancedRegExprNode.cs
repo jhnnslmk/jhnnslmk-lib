@@ -44,12 +44,12 @@ namespace VVVV.Nodes
 				
 				for (int i = 0; i < SpreadMax; i++)
 				{
-					MatchCollection matches = Regex.Matches(FInput[i], FInRegExp[0]);
+					MatchCollection matches = Regex.Matches(FInput[i], FInRegExp[i]);
 					FOutput[i].SliceCount = matches.Count;
 					
 					for (int j = 0; j < matches.Count; j++)
 					{
-						FOutput[i][j] = matches[j].Value;
+						FOutput[i][j] = matches[j].Groups[1].Value;
 					}
 				}
 			}
