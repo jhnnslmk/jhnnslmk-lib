@@ -8,6 +8,7 @@ using VVVV.Utils.VColor;
 using VVVV.Utils.VMath;
 
 using System.Text.RegularExpressions;
+using System.Collections.Generic;
 
 using VVVV.Core.Logging;
 #endregion usings
@@ -24,10 +25,12 @@ namespace VVVV.Nodes
 		public IDiffSpread<string> FInput;
 		
 		[Input("Regular Expression")]
-		public IDiffSpread<string> FInRegExp;
+		public IDiffSpread<ISpread<string>> FInRegExp;
 		
 		[Output("Output")]
 		public ISpread<ISpread<string>> FOutput;
+		
+		private List<MatchCollection> matchList = new List<MatchCollection>();
 		
 		[Import()]
 		public ILogger FLogger;
@@ -36,23 +39,41 @@ namespace VVVV.Nodes
 		//called when data for any output pin is requested
 		public void Evaluate(int SpreadMax)
 		{
-			if (FInput.IsChanged || FInRegExp.IsChanged)
+			if (FInput.IsChanged || FInRegExp.IsChanged || true)
 			{
+				FOutput.SliceCount = FInput.SliceCount;
 				
-				
-				FOutput.SliceCount = SpreadMax;
-				
-				for (int i = 0; i < SpreadMax; i++)
+				for (int i = 0; i < FInput.SliceCount; i++)
 				{
-					MatchCollection matches = Regex.Matches(FInput[i], FInRegExp[i]);
-					FOutput[i].SliceCount = matches.Count;
+					FLogger.Log(LogType.Debug, "-----------------");
+					FLogger.Log(LogType.Debug, "-----------------");
+					FLogger.Log(LogType.Debug, "-----------------");
+					FLogger.Log(LogType.Debug, "INPUT ["+i.ToString()+"]:" + FInput[i]);
 					
-					for (int j = 0; j < matches.Count; j++)
+					matchList.Clear();
+					FOutput[i].SliceCount = 0;
+					for (int j = 0; j < FInRegExp[i].SliceCount; j++)
 					{
-						FOutput[i][j] = matches[j].Groups[1].Value;
+						MatchCollection matches = Regex.Matches(FInput[i], FInRegExp[i][j]);
+						matchList.Add(matches);
+						
+						FLogger.Log(LogType.Debug, FInRegExp[i][j]);
+						FOutput[i].SliceCount += matches.Count;
+						
+						for (int k = 0; k < matches.Count; k++)
+						{
+							FOutput[i][j] = matches[k].Groups[1].Value;
+						}
 					}
+					
+					foreach (MatchCollection m in matchList)
+					{
+						FLogger.Log(LogType.Debug, m.Count.ToString());
+					}
+					
 				}
 			}
 		}
 	}
+	
 }
