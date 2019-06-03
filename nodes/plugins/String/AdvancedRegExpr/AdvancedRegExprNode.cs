@@ -45,10 +45,10 @@ namespace VVVV.Nodes
 				
 				for (int i = 0; i < FInput.SliceCount; i++)
 				{
-					FLogger.Log(LogType.Debug, "-----------------");
-					FLogger.Log(LogType.Debug, "-----------------");
-					FLogger.Log(LogType.Debug, "-----------------");
-					FLogger.Log(LogType.Debug, "INPUT ["+i.ToString()+"]:" + FInput[i]);
+//					FLogger.Log(LogType.Debug, "-----------------");
+//					FLogger.Log(LogType.Debug, "-----------------");
+//					FLogger.Log(LogType.Debug, "-----------------");
+//					FLogger.Log(LogType.Debug, "INPUT ["+i.ToString()+"]:" + FInput[i]);
 					
 					matchList.Clear();
 					FOutput[i].SliceCount = 0;
@@ -57,7 +57,7 @@ namespace VVVV.Nodes
 						MatchCollection matches = Regex.Matches(FInput[i], FInRegExp[i][j]);
 						matchList.Add(matches);
 						
-						FLogger.Log(LogType.Debug, FInRegExp[i][j]);
+//						FLogger.Log(LogType.Debug, FInRegExp[i][j]);
 						FOutput[i].SliceCount += matches.Count;
 						
 						for (int k = 0; k < matches.Count; k++)
@@ -68,7 +68,7 @@ namespace VVVV.Nodes
 					
 					foreach (MatchCollection m in matchList)
 					{
-						FLogger.Log(LogType.Debug, m.Count.ToString());
+//						FLogger.Log(LogType.Debug, m.Count.ToString());
 					}
 					
 				}
