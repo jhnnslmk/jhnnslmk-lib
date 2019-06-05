@@ -39,7 +39,7 @@ namespace VVVV.Nodes
 		//called when data for any output pin is requested
 		public void Evaluate(int SpreadMax)
 		{
-			if (FInput.IsChanged || FInRegExp.IsChanged || true)
+			if (FInput.IsChanged || FInRegExp.IsChanged)
 			{
 				FOutput.SliceCount = FInput.SliceCount;
 				
