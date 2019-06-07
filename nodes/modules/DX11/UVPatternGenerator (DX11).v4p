@@ -91,6 +91,8 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Width" slicecount="1" values="8" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="22" srcpinname="Output" dstnodeid="19" dstpinname="Hue">
    </LINK>
@@ -649,9 +651,9 @@
    <LINK srcnodeid="58" srcpinname="Output" dstnodeid="85" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="89">
-   <BOUNDS type="Box" left="5010" top="255" width="480" height="480">
+   <BOUNDS type="Box" left="7275" top="690" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="5010" top="255" width="0" height="0">
+   <BOUNDS type="Node" left="7275" top="690" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -704,4 +706,20 @@
    </PACK>
    <PACK Name="VVVV.Packs.Image" Version="0.2.0">
    </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="93">
+   <BOUNDS type="Box" left="5550" top="570" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5550" top="570" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="8">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Color Width|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="93" srcpinname="Y Output Value" dstnodeid="22" dstpinname="Width">
+   </LINK>
    </PATCH>
