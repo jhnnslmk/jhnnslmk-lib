@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="D:\Repositories\KIA-KED13\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Transform\Translate (Transform 2d).v4p" systemname="Translate (Transform 2d)" filename="D:\Repositories\KIA-KED13\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Transform\Translate (Transform 2d).v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha38.2.dtd" >
+   <PATCH nodename="C:\Users\PC3\Desktop\jhnnslmk\Repositories\gb\vvvv\vvvv_50alpha38.2_x64\packs\jhnnslmk-lib\nodes\modules\Transform\Translate (Transform 2d).v4p" systemname="Translate (Transform 2d)" filename="D:\Repositories\KIA-KED13\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Transform\Translate (Transform 2d).v4p">
    <NODE systemname="Translate (Transform Vector)" nodename="Translate (Transform Vector)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1515" top="2430" width="100" height="100">
    </BOUNDS>
@@ -19,9 +19,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="2" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2175" top="1500" width="795" height="480">
+   <BOUNDS type="Box" left="2175" top="750" width="795" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="2175" top="1500" width="0" height="0">
+   <BOUNDS type="Node" left="2175" top="750" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0,0">
    </PIN>
@@ -35,37 +35,73 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="XY">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="3" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="1500" top="2820" width="795" height="240">
+   <BOUNDS type="Box" left="1500" top="3120" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1500" top="2820" width="0" height="0">
+   <BOUNDS type="Node" left="1500" top="3120" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Transform Out|">
    </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Transform Out" dstnodeid="3" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="1" srcpinname="XYZ" dstnodeid="0" dstpinname="XYZ">
    </LINK>
    <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="1" dstpinname="XY">
    </LINK>
-   <BOUNDS type="Window" left="22545" top="17535" width="3780" height="4320">
+   <BOUNDS type="Window" left="18255" top="8640" width="5580" height="4320">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.0.5">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="4" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="660" top="1065" width="795" height="240">
+   <BOUNDS type="Box" left="660" top="765" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="660" top="1065" width="0" height="0">
+   <BOUNDS type="Node" left="660" top="765" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Transform In|">
    </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="Output Node" dstnodeid="0" dstpinname="Transform In">
+   </LINK>
+   <NODE systemname="Translate (Transform)" nodename="Translate (Transform)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="3570" top="2535" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="3450" top="1620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="6" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="X" dstnodeid="5" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Y" dstnodeid="5" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output Node" dstnodeid="5" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Transform Out" dstnodeid="3" dstpinname="Input Node">
    </LINK>
    </PATCH>
