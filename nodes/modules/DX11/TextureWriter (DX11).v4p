@@ -430,4 +430,22 @@
    </NODE>
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="40" dstpinname="Input String">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="41">
+   <BOUNDS type="Box" left="4005" top="7575" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4005" top="7575" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Valid">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Valid" dstnodeid="41" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>
