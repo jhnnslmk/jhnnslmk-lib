@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
-   <PATCH nodename="D:\Repositories\here-realitycore\vvvv\vvvv_50alpha36.1_x64\packs\jhnnslmk-lib\nodes\modules\DX11\PerfMeter (DX11.Debug Advanced).v4p" systemname="PerfMeter (DX11.Debug Advanced)" filename="D:\Repositories\sbsn-friedland-lagerchronik\Software\Contributions\modules\PerfMeter (DX11.Debug Advanced).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha38.2.dtd" >
+   <PATCH nodename="C:\Users\PC3\Desktop\jhnnslmk\Repositories\prolog\vvvv\vvvv_50alpha38.2_x64\packs\jhnnslmk-lib\nodes\modules\DX11\PerfMeter (DX11.Debug Advanced).v4p" systemname="PerfMeter (DX11.Debug Advanced)" filename="D:\Repositories\sbsn-friedland-lagerchronik\Software\Contributions\modules\PerfMeter (DX11.Debug Advanced).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="19455" top="7020" width="33915" height="23265">
    </BOUNDS>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE id="38" nodename="Timing (Debug)" systemname="Timing (Debug)">
    <BOUNDS height="270" left="10050" top="885" type="Node" width="2250">
@@ -836,8 +836,6 @@
    <PIN pinname="Color" slicecount="1" values="|0.46271,0.46271,0.46271,1.00000|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="3" srcpinname="Transform Out" dstnodeid="179" dstpinname="Transform">
-   </LINK>
    <LINK srcnodeid="179" srcpinname="Layer" dstnodeid="41" dstpinname="Layer 3">
    </LINK>
    <LINK srcnodeid="172" srcpinname="Geometry Out" dstnodeid="179" dstpinname="Geometry">
@@ -1879,7 +1877,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="28530" top="1110" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
