@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha38.2.dtd" >
-   <PATCH nodename="C:\Users\PC3\Desktop\jhnnslmk\Repositories\prolog\vvvv\vvvv_50alpha38.2_x64\packs\jhnnslmk-lib\nodes\modules\DX11\Text (DX11 DirectWrite Draw).v4p" systemname="Text (DX11 DirectWrite Draw)" filename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\DX11\Text (DX11 DirectWrite Draw).v4p">
+   <PATCH nodename="C:\Users\PC3\Desktop\jhnnslmk\Repositories\prolog\vvvv\vvvv_50alpha38.2_x64\packs\jhnnslmk-lib\nodes\modules\DX11\Text (DX11 DirectWrite Advanced Draw).v4p" systemname="Text (DX11 DirectWrite Draw)" filename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\DX11\Text (DX11 DirectWrite Draw).v4p">
    <NODE systemname="Text (DX11.Layer Advanced)" filename="%VVVV%\packs\dx11\nodes\plugins\text\VVVV.DX11.Nodes.Text.dll" nodename="Text (DX11.Layer Advanced)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1500" top="6030" width="100" height="100">
    </BOUNDS>
@@ -54,6 +54,8 @@
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Apply">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <NODE id="4" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
@@ -189,7 +191,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="4815" top="3570" width="840" height="270">
+   <BOUNDS type="Node" left="4590" top="3615" width="840" height="270">
    </BOUNDS>
    <PIN pinname="XY" visible="1">
    </PIN>
@@ -199,9 +201,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="19" dstpinname="XY">
-   <LINKPOINT x="15150" y="1410">
+   <LINKPOINT x="15075" y="1425">
    </LINKPOINT>
-   <LINKPOINT x="5430" y="3225">
+   <LINKPOINT x="5280" y="3255">
    </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="20" systemname="IOBox (Enumerations)">
@@ -253,15 +255,13 @@
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Text Layout|">
    </PIN>
-   <PIN pinname="Input Node" slicecount="1" values="||">
-   </PIN>
    </NODE>
    <PACK Name="vvvv-Message" Version="2.9.10">
    </PACK>
-   <NODE id="1" systemname="TextLayout (DirectWrite)" filename="%VVVV%\packs\dx11\nodes\plugins\directwrite\VVVV.Nodes.DirectWrite.dll" nodename="TextLayout (DirectWrite)" componentmode="Hidden">
-   <BOUNDS type="Node" left="1680" top="3915" width="3975" height="270">
+   <NODE id="1" systemname="TextLayout (DirectWrite Advanced)" filename="%VVVV%\packs\dx11\nodes\plugins\directwrite\VVVV.Nodes.DirectWrite.dll" nodename="TextLayout (DirectWrite Advanced)" componentmode="Hidden">
+   <BOUNDS type="Node" left="2040" top="4455" width="3975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="1680" top="3915" width="3000" height="3000">
+   <BOUNDS type="Box" left="2040" top="4455" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -277,25 +277,63 @@
    </PIN>
    <PIN pinname="Text Alignment" visible="1" slicecount="1" values="Center">
    </PIN>
+   <PIN pinname="Styles" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Styles Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Apply" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="22" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="19" srcpinname="Y" dstnodeid="1" dstpinname="Maximum Height" linkstyle="PolyLine">
-   </LINK>
-   <LINK srcnodeid="19" srcpinname="X" dstnodeid="1" dstpinname="Maximum Width" linkstyle="PolyLine">
-   </LINK>
-   <LINK srcnodeid="8" srcpinname="Output Enum" dstnodeid="1" dstpinname="Paragraph Alignment" linkstyle="PolyLine">
-   </LINK>
-   <LINK srcnodeid="7" srcpinname="Output Enum" dstnodeid="1" dstpinname="Text Alignment" linkstyle="PolyLine">
-   </LINK>
-   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="1" dstpinname="Format" linkstyle="PolyLine">
-   <LINKPOINT x="7605" y="2235">
-   </LINKPOINT>
-   <LINKPOINT x="2490" y="3390">
-   </LINKPOINT>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="0" dstpinname="Text Layout">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="1" dstpinname="Text" linkstyle="PolyLine">
    </LINK>
-   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="0" dstpinname="Text Layout">
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="1" dstpinname="Format" linkstyle="PolyLine">
+   <LINKPOINT x="7725" y="2415">
+   </LINKPOINT>
+   <LINKPOINT x="2730" y="3750">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output Enum" dstnodeid="1" dstpinname="Text Alignment" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output Enum" dstnodeid="1" dstpinname="Paragraph Alignment" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="X" dstnodeid="1" dstpinname="Maximum Width" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Y" dstnodeid="1" dstpinname="Maximum Height" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="22" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="23">
+   <BOUNDS type="Box" left="18915" top="570" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="18915" top="570" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Styles">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="Output Node" dstnodeid="1" dstpinname="Styles">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="24">
+   <BOUNDS type="Box" left="20040" top="390" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="20040" top="390" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Styles Bin Size|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Styles Bin Size">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Apply">
    </LINK>
    </PATCH>
