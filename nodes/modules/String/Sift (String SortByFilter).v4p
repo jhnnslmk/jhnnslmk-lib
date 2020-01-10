@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="D:\Repositories\senckenberg-infostation\Software\nodes\modules\Sift (String SortByFilter).v4p" systemname="Sift (String SortByFilter)" filename="D:\Repositories\senckenberg-infostation\Software\nodes\modules\Sift (String SortByFilter).v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta39.dtd" >
+   <PATCH nodename="C:\projects\wdr_beathoven\vvvv\vvvv_beta_39_x64\packs\jhnnslmk-lib\nodes\modules\String\Sift (String SortByFilter).v4p" systemname="Sift (String SortByFilter)" filename="D:\Repositories\senckenberg-infostation\Software\nodes\modules\Sift (String SortByFilter).v4p">
    <NODE id="0" systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Found At Position" visible="1" pintype="Output">
    </PIN>
@@ -15,7 +15,7 @@
    </PIN>
    <PIN pinname="Comparison" visible="1" slicecount="1" pintype="Input" values="MatchesAny">
    </PIN>
-   <BOUNDS type="Node" left="735" top="1080" width="100" height="100">
+   <BOUNDS type="Node" left="1545" top="1215" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Filter Index" visible="1" pintype="Output">
    </PIN>
@@ -27,9 +27,9 @@
    </PIN>
    </NODE>
    <NODE id="1" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Box" left="915" top="2250" width="795" height="240">
+   <BOUNDS type="Box" left="1725" top="2385" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="915" top="2250" width="0" height="0">
+   <BOUNDS type="Node" left="1725" top="2385" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1" slicecount="1" pintype="Input" values="0">
    </PIN>
@@ -105,9 +105,9 @@
    </PIN>
    </NODE>
    <NODE id="2" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Box" left="3120" top="2130" width="795" height="240">
+   <BOUNDS type="Box" left="3930" top="2265" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3120" top="2130" width="0" height="0">
+   <BOUNDS type="Node" left="3930" top="2265" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" pintype="Configuration" values="|Former Index|">
    </PIN>
@@ -185,7 +185,7 @@
    <NODE id="3" systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Output" visible="1" pintype="Output">
    </PIN>
-   <BOUNDS type="Node" left="915" top="1860" width="100" height="100">
+   <BOUNDS type="Node" left="1725" top="1995" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Index" visible="1" pintype="Input">
    </PIN>
@@ -203,9 +203,9 @@
    </PIN>
    </NODE>
    <NODE id="4" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Box" left="15" top="240" width="795" height="240">
+   <BOUNDS type="Box" left="825" top="375" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="15" top="240" width="0" height="0">
+   <BOUNDS type="Node" left="825" top="375" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" pintype="Configuration" values="Input">
    </PIN>
@@ -253,9 +253,9 @@
    </PIN>
    </NODE>
    <NODE id="5" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Box" left="900" top="240" width="795" height="240">
+   <BOUNDS type="Box" left="1710" top="375" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="900" top="240" width="0" height="0">
+   <BOUNDS type="Node" left="1710" top="375" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" pintype="Configuration" values="Filter">
    </PIN>
@@ -305,9 +305,9 @@
    <NODE id="6" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)" hiddenwhenlocked="0" managers="">
    <PIN pinname="Descriptive Name" slicecount="1" pintype="Configuration" values="|Case Sensitive|">
    </PIN>
-   <BOUNDS type="Box" left="3165" top="240" width="480" height="480">
+   <BOUNDS type="Box" left="3975" top="375" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="3165" top="240" width="0" height="0">
+   <BOUNDS type="Node" left="3975" top="375" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" pintype="Input" values="0">
    </PIN>
@@ -383,11 +383,11 @@
    <NODE id="7" nodename="IOBox (Enumerations)" componentmode="InABox" systemname="IOBox (Enumerations)" hiddenwhenlocked="0" managers="">
    <PIN pinname="Descriptive Name" slicecount="1" pintype="Configuration" values="Comparison">
    </PIN>
-   <BOUNDS type="Box" left="1770" top="240" width="1230" height="240">
+   <BOUNDS type="Box" left="2580" top="375" width="1230" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1770" top="240" width="0" height="0">
+   <BOUNDS type="Node" left="2580" top="375" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" pintype="Input" values="MatchesAny">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" pintype="Input" values="ContainsAny">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="Matches">
    </PIN>
@@ -431,7 +431,7 @@
    <NODE id="8" systemname="Sort (Spreads)" nodename="Sort (Spreads)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Former Index" visible="1" pintype="Output">
    </PIN>
-   <BOUNDS type="Node" left="1170" top="1425" width="100" height="100">
+   <BOUNDS type="Node" left="1980" top="1560" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" pintype="Input">
    </PIN>
@@ -464,14 +464,14 @@
    </LINK>
    <LINK srcnodeid="8" srcpinname="Former Index" dstnodeid="2" dstpinname="Y Input Value">
    </LINK>
-   <BOUNDS type="Window" left="11205" top="16665" width="4455" height="3285">
+   <BOUNDS type="Window" left="11490" top="6225" width="7080" height="4410">
    </BOUNDS>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="39.0.0">
    </PACK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9">
-   <BOUNDS type="Box" left="30" top="1545" width="795" height="960">
+   <BOUNDS type="Box" left="840" top="1680" width="795" height="960">
    </BOUNDS>
-   <BOUNDS type="Node" left="30" top="1545" width="0" height="0">
+   <BOUNDS type="Node" left="840" top="1680" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -491,9 +491,9 @@
    <LINK srcnodeid="0" srcpinname="Input Index" dstnodeid="9" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10">
-   <BOUNDS type="Box" left="1935" top="2205" width="795" height="240">
+   <BOUNDS type="Box" left="2745" top="2340" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1935" top="2205" width="0" height="0">
+   <BOUNDS type="Node" left="2745" top="2340" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -508,4 +508,24 @@
    </NODE>
    <LINK srcnodeid="8" srcpinname="Output" dstnodeid="10" dstpinname="Y Input Value">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12">
+   <BOUNDS type="Box" left="870" top="2865" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="870" top="2865" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Hits">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Hits" dstnodeid="12" dstpinname="Y Input Value">
+   </LINK>
+   <PACK Name="dx11" Version="1.3.1.1">
+   </PACK>
+   <PACK Name="dx11.particles" Version="1.0.7">
+   </PACK>
    </PATCH>

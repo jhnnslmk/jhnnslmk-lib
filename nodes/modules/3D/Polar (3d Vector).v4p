@@ -1,0 +1,87 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta39.dtd" >
+   <PATCH nodename="C:\projects\wdr_beathoven\vvvv\vvvv_beta_39_x64\packs\jhnnslmk-lib\nodes\modules\3D\Polar (3d Vector).v4p" systemname="Cartesian (3d Vector)" filename="D:\Repositories\bmw-iperformance\Software\nodes\modules\Cartesian (3d Vector).v4p">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="3" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="885" top="960" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="885" top="960" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0,0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="XYZ">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="-1" top="-1" width="3250" height="5010">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="39.0.0">
+   </PACK>
+   <PACK Name="dx11" Version="1.3.1.1">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.10">
+   </PACK>
+   <PACK Name="dx11.particles" Version="1.0.7">
+   </PACK>
+   <NODE id="0" systemname="Polar (3d Vector)" nodename="Polar (3d Vector)" componentmode="Hidden">
+   <BOUNDS type="Node" left="885" top="1830" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Pitch" visible="1">
+   </PIN>
+   <PIN pinname="Yaw" visible="1">
+   </PIN>
+   <PIN pinname="Length" visible="1" slicecount="1" values="1.37">
+   </PIN>
+   <PIN pinname="XYZ" visible="1" slicecount="3" values="0,0,-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="0" dstpinname="XYZ">
+   </LINK>
+   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="960" top="2235" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Pitch" dstnodeid="4" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Yaw" dstnodeid="4" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Length" dstnodeid="4" dstpinname="Z">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="5">
+   <BOUNDS type="Box" left="990" top="2820" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="990" top="2820" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0,0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Pitch Yaw Length|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="XYZ" dstnodeid="5" dstpinname="Y Input Value">
+   </LINK>
+   </PATCH>
