@@ -1,11 +1,11 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
-   <PATCH nodename="D:\Repositories\here-realitycore\vvvv\vvvv_50beta37_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\SwitchToNil (Node).v4p" systemname="SwitchToNil (Node)" filename="D:\Repositories\here-realitycore\vvvv\vvvv_50beta37_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\SwitchToNil (Node).v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta39.dtd" >
+   <PATCH nodename="C:\projects\wdr_beathoven\vvvv\vvvv_beta_39_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\SwitchToNil (Node).v4p" systemname="SwitchToNil (Node)" filename="D:\Repositories\here-realitycore\vvvv\vvvv_50beta37_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\SwitchToNil (Node).v4p">
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="3" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="2070" top="660" width="480" height="480">
    </BOUNDS>
    <BOUNDS type="Node" left="2070" top="660" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -20,13 +20,13 @@
    </NODE>
    <BOUNDS type="Window" left="-1" top="-1" width="4290" height="4620">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.3.1">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.10">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="39.0.0">
    </PACK>
-   <PACK Name="dx11.particles" Version="1.0.5">
+   <PACK Name="dx11.particles" Version="1.0.7">
    </PACK>
    <NODE systemname="NIL (Node)" filename="%VVVV%\lib\nodes\modules\Node\NIL (Node).v4p" nodename="NIL (Node)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1275" top="1320" width="100" height="100">

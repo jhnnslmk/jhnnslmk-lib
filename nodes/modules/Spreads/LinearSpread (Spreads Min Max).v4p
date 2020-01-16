@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\LinearSpread (Spreads Min Max).v4p" systemname="LinearSpread (Spreads Min Max)" filename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\LinearSpread (Spreads Min Max).v4p" scrollx="0" scrolly="30">
-   <BOUNDS type="Window" left="14625" top="16470" width="6645" height="6855">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta39.dtd" >
+   <PATCH nodename="C:\projects\wdr_beathoven\vvvv\vvvv_beta_39_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\LinearSpread (Spreads Min Max).v4p" systemname="LinearSpread (Spreads Min Max)" filename="D:\Work\MESO\HERE\vvvv\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\LinearSpread (Spreads Min Max).v4p" scrollx="0" scrolly="30">
+   <BOUNDS type="Window" left="8130" top="7635" width="6645" height="6855">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.3.1">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="39.0.0">
    </PACK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="5430" top="1410" width="795" height="240">
@@ -168,4 +168,6 @@
    </NODE>
    <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="9" dstpinname="Phase">
    </LINK>
+   <PACK Name="dx11.particles" Version="1.0.7">
+   </PACK>
    </PATCH>

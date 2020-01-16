@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha38.2.dtd" >
-   <PATCH nodename="C:\Users\PC3\Desktop\jhnnslmk\Repositories\ceasars-main\vvvv_50alpha38.2_x64\packs\jhnnslmk-lib\nodes\modules\Transform\Camera (Transform Orbit Fly).v4p" systemname="Camera (Transform Orbit-Fly)" filename="C:\Users\Natan\Desktop\Camera\Camera (Transform Orbit-Fly).v4p" scrollx="0" scrolly="495">
-   <BOUNDS type="Window" left="2970" top="1020" width="23580" height="13380">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta39.dtd" >
+   <PATCH nodename="C:\projects\wdr_beathoven\vvvv\vvvv_beta_39_x64\packs\jhnnslmk-lib\nodes\modules\Transform\Camera (Transform Orbit Fly).v4p" systemname="Camera (Transform Orbit-Fly)" filename="C:\Users\Natan\Desktop\Camera\Camera (Transform Orbit-Fly).v4p" scrollx="0" scrolly="495">
+   <BOUNDS type="Window" left="1440" top="5115" width="18120" height="9600">
    </BOUNDS>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="121" systemname="IOBox (Node)">
    <BOUNDS type="Node" left="1680" top="32190" width="0" height="0">
@@ -627,7 +627,7 @@
    </BOUNDS>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Inital Distance|">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="1.6">
+   <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -2856,7 +2856,7 @@
    <LINKPOINT x="2875" y="2778">
    </LINKPOINT>
    </LINK>
-   <PACK Name="addonpack" Version="38.1.0">
+   <PACK Name="addonpack" Version="39.0.0">
    </PACK>
    <LINK srcnodeid="954" srcpinname="W" dstnodeid="192" dstpinname="Input 1">
    </LINK>
@@ -3024,7 +3024,7 @@
    </LINK>
    <LINK srcnodeid="968" srcpinname="OnChange" dstnodeid="789" dstpinname="Input 4">
    </LINK>
-   <PACK Name="dx11.particles" Version="1.0.6">
+   <PACK Name="dx11.particles" Version="1.0.7">
    </PACK>
    <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
    </PACK>

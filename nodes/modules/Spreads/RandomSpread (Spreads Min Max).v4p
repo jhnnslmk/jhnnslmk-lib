@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="D:\Repositories\Karlsruhe-Medienfassade\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\RandomSpread (Spreads Min Max).v4p" systemname="RandomSpread (Spreads Min Max)" filename="D:\Repositories\Karlsruhe-Medienfassade\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\RandomSpread (Spreads Min Max).v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta39.dtd" >
+   <PATCH nodename="C:\projects\wdr_beathoven\vvvv\vvvv_beta_39_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\RandomSpread (Spreads Min Max).v4p" systemname="RandomSpread (Spreads Min Max)" filename="D:\Repositories\Karlsruhe-Medienfassade\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Spreads\RandomSpread (Spreads Min Max).v4p">
    <NODE systemname="RandomSpread (Spreads)" nodename="RandomSpread (Spreads)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1965" top="4650" width="100" height="100">
    </BOUNDS>
@@ -37,7 +37,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2325" top="1500" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.03">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.75">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -53,7 +53,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1500" top="1500" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.005">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.25">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -144,8 +144,10 @@
    </LINK>
    <BOUNDS type="Window" left="-1" top="-1" width="5655" height="6675">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="39.0.0">
+   </PACK>
+   <PACK Name="dx11.particles" Version="1.0.7">
    </PACK>
    </PATCH>
