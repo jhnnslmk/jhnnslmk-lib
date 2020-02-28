@@ -1,0 +1,87 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha39.1.dtd" >
+   <PATCH nodename="C:\projects\hdg_epilog\vvvv\vvvv_beta_39.1-preview_x64\packs\jhnnslmk-lib\nodes\modules\Animation\FrameTrigger (Animation).v4p" systemname="FrameTrigger (Animation)" filename="C:\projects\hdg_epilog\vvvv\vvvv_beta_39.1-preview_x64\packs\jhnnslmk-lib\nodes\modules\Animation\FrameTrigger (Animation).v4p">
+   <BOUNDS type="Window" left="18750" top="6285" width="9000" height="9000">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.3.1.1">
+   </PACK>
+   <PACK Name="dx11.particles" Version="1.0.7">
+   </PACK>
+   <PACK Name="addonpack" Version="38.1.0">
+   </PACK>
+   <NODE systemname="FrameCounter (Animation)" nodename="FrameCounter (Animation)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="1125" top="1305" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Frame Count" visible="1">
+   </PIN>
+   <PIN pinname="Enable" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Mod (Value)" nodename="Mod (Value)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1125" top="2070" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="30">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Frame Count" dstnodeid="3" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="FrameDifference (Animation)" filename="" nodename="FrameDifference (Animation)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="1125" top="2475" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="2" dstpinname="Input">
+   </LINK>
+   <NODE systemname="LT (Value)" nodename="LT (Value)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1125" top="2820" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="1" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="0">
+   <BOUNDS type="Box" left="1320" top="870" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1320" top="870" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="10">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Frames">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="5">
+   <BOUNDS type="Box" left="1140" top="3345" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1140" top="3345" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="5" dstpinname="Y Input Value">
+   </LINK>
+   </PATCH>
