@@ -1,9 +1,9 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="D:\Repositories\here-demo\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Assimp\GetMesh (Assimp).v4p" systemname="GetMesh (Assimp)" filename="D:\Repositories\KIA-Dashboard18\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Assimp\GetMesh (Assimp).v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha39.1.dtd" >
+   <PATCH nodename="F:\_jhnnslmk\Repositories\hub_tracking\vvvv\vvvv_beta_39.1_x64\packs\jhnnslmk-lib\nodes\modules\Assimp\GetMesh (Assimp).v4p" systemname="GetMesh (Assimp)" filename="D:\Repositories\KIA-Dashboard18\vvvv\vvvv_50beta36_x64\packs\jhnnslmk-lib\nodes\modules\Assimp\GetMesh (Assimp).v4p">
    <NODE systemname="Select (Transform)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Transform)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="3180" top="1930" width="100" height="100">
+   <BOUNDS type="Node" left="2790" top="3240" width="585" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="3180" top="1930" width="2000" height="2000">
+   <BOUNDS type="Box" left="2790" top="3240" width="2000" height="2000">
    </BOUNDS>
    <PIN pinname="Select" visible="1" slicecount="688" values="0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
    </PIN>
@@ -13,7 +13,7 @@
    </PIN>
    </NODE>
    <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="1">
-   <BOUNDS type="Node" left="1685" top="3135" width="100" height="100">
+   <BOUNDS type="Node" left="1290" top="4140" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Index" visible="1" slicecount="679" values="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678">
    </PIN>
@@ -23,9 +23,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Node (Assimp)" filename="%VVVV%\packs\dx11\nodes\plugins\assimp\VVVV.DX11.Nodes.Assimp.dll" nodename="Node (Assimp)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="3015" top="1500" width="100" height="100">
+   <BOUNDS type="Node" left="2625" top="2055" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3015" top="1500" width="2000" height="2000">
+   <BOUNDS type="Box" left="2625" top="2055" width="2000" height="2000">
    </BOUNDS>
    <PIN pinname="Root Node" slicecount="1" visible="1" values="Displays">
    </PIN>
@@ -35,9 +35,11 @@
    </PIN>
    <PIN pinname="Name" visible="1">
    </PIN>
+   <PIN pinname="Mesh Id" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="Multiply (Transform)" nodename="Multiply (Transform)" componentmode="Hidden" id="3">
-   <BOUNDS type="Node" left="3155" top="3210" width="100" height="100">
+   <BOUNDS type="Node" left="2790" top="4140" width="765" height="270">
    </BOUNDS>
    <PIN pinname="Transform In 1" visible="1">
    </PIN>
@@ -47,9 +49,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Mesh (DX11.Geometry Assimp)" filename="%VVVV%\packs\dx11\nodes\plugins\assimp\VVVV.DX11.Nodes.Assimp.dll" nodename="Mesh (DX11.Geometry Assimp)" componentmode="Hidden" id="4">
-   <BOUNDS type="Node" left="1500" top="1500" width="100" height="100">
+   <BOUNDS type="Node" left="1110" top="2055" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1500" top="1500" width="2000" height="2000">
+   <BOUNDS type="Box" left="1110" top="2055" width="2000" height="2000">
    </BOUNDS>
    <PIN pinname="Material Index" visible="1">
    </PIN>
@@ -57,9 +59,9 @@
    <NODE id="5" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Scene">
    </PIN>
-   <BOUNDS type="Box" left="1500" top="500" width="750" height="240">
+   <BOUNDS type="Box" left="1110" top="1200" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1500" top="500" width="750" height="240">
+   <BOUNDS type="Node" left="1110" top="1200" width="750" height="240">
    </BOUNDS>
    <PIN pinname="Output Node" visible="1">
    </PIN>
@@ -68,28 +70,24 @@
    </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="1" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="2" srcpinname="Mesh Id" dstnodeid="1" dstpinname="Index">
-   </LINK>
    <NODE id="6" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Geometry">
    </PIN>
-   <BOUNDS type="Box" left="1685" top="3810" width="750" height="240">
+   <BOUNDS type="Box" left="1290" top="5415" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1685" top="3810" width="750" height="240">
+   <BOUNDS type="Node" left="1290" top="5415" width="750" height="240">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Output Node" dstnodeid="6" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="5" srcpinname="Output Node" dstnodeid="2" dstpinname="Scene">
    </LINK>
-   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="3" dstpinname="Transform In 1">
-   </LINK>
    <NODE id="7" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Transform">
    </PIN>
-   <BOUNDS type="Box" left="5030" top="530" width="750" height="240">
+   <BOUNDS type="Box" left="4995" top="1200" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="5030" top="530" width="750" height="240">
+   <BOUNDS type="Node" left="4995" top="1200" width="750" height="240">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="7" srcpinname="Output Node" dstnodeid="3" dstpinname="Transform In 2">
@@ -97,9 +95,9 @@
    <NODE id="8" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Transform Out|">
    </PIN>
-   <BOUNDS type="Box" left="3155" top="3810" width="750" height="240">
+   <BOUNDS type="Box" left="2790" top="5415" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3155" top="3810" width="750" height="240">
+   <BOUNDS type="Node" left="2790" top="5415" width="750" height="240">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="3" srcpinname="Transform Out" dstnodeid="8" dstpinname="Input Node">
@@ -108,12 +106,12 @@
    </LINK>
    <LINK srcnodeid="2" srcpinname="Mesh Id Bin Size" dstnodeid="0" dstpinname="Select">
    </LINK>
-   <BOUNDS type="Window" left="4500" top="15900" width="14880" height="5820">
+   <BOUNDS type="Window" left="7995" top="4275" width="17205" height="8220">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="9" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="3165" top="570" width="795" height="240">
+   <BOUNDS type="Box" left="2835" top="1200" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3165" top="570" width="0" height="0">
+   <BOUNDS type="Node" left="2835" top="1200" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="||">
    </PIN>
@@ -125,17 +123,19 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Root Node|">
    </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="9" srcpinname="Output String" dstnodeid="2" dstpinname="Root Node">
    </LINK>
-   <PACK Name="dx11" Version="1.3.1">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="39.1.0">
    </PACK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10">
-   <BOUNDS type="Box" left="4185" top="450" width="480" height="480">
+   <BOUNDS type="Box" left="4005" top="1200" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="4185" top="450" width="0" height="0">
+   <BOUNDS type="Node" left="4005" top="1200" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -149,13 +149,15 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Recurse">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Recurse">
    </LINK>
    <NODE systemname="Material (Assimp)" filename="%VVVV%\packs\dx11\nodes\plugins\assimp\VVVV.DX11.Nodes.Assimp.dll" nodename="Material (Assimp)" componentmode="Hidden" id="11">
-   <BOUNDS type="Node" left="8475" top="1605" width="100" height="100">
+   <BOUNDS type="Node" left="8085" top="2055" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8475" top="1605" width="3000" height="3000">
+   <BOUNDS type="Box" left="8085" top="2055" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Scene" visible="1">
    </PIN>
@@ -169,7 +171,7 @@
    <LINK srcnodeid="5" srcpinname="Output Node" dstnodeid="11" dstpinname="Scene">
    </LINK>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="5060" top="2985" width="100" height="100">
+   <BOUNDS type="Node" left="4665" top="4140" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Index" visible="1" slicecount="679" values="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678">
    </PIN>
@@ -182,16 +184,14 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Mesh Id" dstnodeid="13" dstpinname="Index">
-   </LINK>
    <LINK srcnodeid="4" srcpinname="Material Index" dstnodeid="13" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="4" srcpinname="Material Index" dstnodeid="13" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14">
-   <BOUNDS type="Box" left="5055" top="3780" width="795" height="240">
+   <BOUNDS type="Box" left="4665" top="5415" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="5055" top="3780" width="0" height="0">
+   <BOUNDS type="Node" left="4665" top="5415" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -205,9 +205,9 @@
    <LINK srcnodeid="13" srcpinname="Output" dstnodeid="14" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="Select (String)" filename="" nodename="Select (String)" componentmode="Hidden" id="15">
-   <BOUNDS type="Node" left="6645" top="3280" width="100" height="100">
+   <BOUNDS type="Node" left="6255" top="3240" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6645" top="3280" width="2000" height="2000">
+   <BOUNDS type="Box" left="6255" top="3385" width="2000" height="2000">
    </BOUNDS>
    <PIN pinname="Select" visible="1" slicecount="688" values="0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
    </PIN>
@@ -221,9 +221,9 @@
    <LINK srcnodeid="2" srcpinname="Name" dstnodeid="15" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="16">
-   <BOUNDS type="Box" left="6660" top="3900" width="795" height="240">
+   <BOUNDS type="Box" left="6255" top="5415" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="6660" top="3900" width="0" height="0">
+   <BOUNDS type="Node" left="6255" top="5415" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -235,11 +235,11 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Name">
    </PIN>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="16" dstpinname="Input String">
-   </LINK>
    <NODE systemname="GetSlice (Color)" nodename="GetSlice (Color)" componentmode="Hidden" id="17">
-   <BOUNDS type="Node" left="8610" top="3315" width="100" height="100">
+   <BOUNDS type="Node" left="8085" top="4890" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Index" visible="1">
    </PIN>
@@ -253,9 +253,9 @@
    <LINK srcnodeid="11" srcpinname="Ambient Color" dstnodeid="17" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="19">
-   <BOUNDS type="Box" left="8580" top="3750" width="2250" height="480">
+   <BOUNDS type="Box" left="8085" top="5415" width="2250" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="8580" top="3750" width="0" height="0">
+   <BOUNDS type="Node" left="8085" top="5415" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Ambient Color|">
    </PIN>
@@ -265,9 +265,9 @@
    <LINK srcnodeid="17" srcpinname="Output" dstnodeid="19" dstpinname="Color Input">
    </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="20">
-   <BOUNDS type="Box" left="10935" top="3765" width="2250" height="480">
+   <BOUNDS type="Box" left="10545" top="5415" width="2250" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="10935" top="3765" width="0" height="0">
+   <BOUNDS type="Node" left="10545" top="5415" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Diffuse Color|">
    </PIN>
@@ -275,7 +275,7 @@
    </PIN>
    </NODE>
    <NODE systemname="GetSlice (Color)" nodename="GetSlice (Color)" componentmode="Hidden" id="21">
-   <BOUNDS type="Node" left="9690" top="3300" width="100" height="100">
+   <BOUNDS type="Node" left="10545" top="4890" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Index" visible="1">
    </PIN>
@@ -291,9 +291,9 @@
    <LINK srcnodeid="21" srcpinname="Output" dstnodeid="20" dstpinname="Color Input">
    </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="22">
-   <BOUNDS type="Box" left="13395" top="3825" width="2250" height="480">
+   <BOUNDS type="Box" left="13005" top="5415" width="2250" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="13395" top="3825" width="0" height="0">
+   <BOUNDS type="Node" left="13005" top="5415" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Specular Color|">
    </PIN>
@@ -301,7 +301,7 @@
    </PIN>
    </NODE>
    <NODE systemname="GetSlice (Color)" nodename="GetSlice (Color)" componentmode="Hidden" id="23">
-   <BOUNDS type="Node" left="13380" top="3270" width="100" height="100">
+   <BOUNDS type="Node" left="13005" top="4890" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Index" visible="1">
    </PIN>
@@ -315,5 +315,99 @@
    <LINK srcnodeid="11" srcpinname="Specular Color" dstnodeid="23" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="23" srcpinname="Output" dstnodeid="22" dstpinname="Color Input">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.7">
+   </PACK>
+   <NODE systemname="Node (Assimp)" filename="%VVVV%\packs\dx11\nodes\plugins\assimp\VVVV.DX11.Nodes.Assimp.dll" nodename="Node (Assimp)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="5865" top="2055" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5865" top="2055" width="2000" height="2000">
+   </BOUNDS>
+   <PIN pinname="Root Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Include Self" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Recurse" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Name" visible="1">
+   </PIN>
+   <PIN pinname="Mesh Id" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output Node" dstnodeid="24" dstpinname="Scene">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="25">
+   <BOUNDS type="Box" left="6090" top="1200" width="1155" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6090" top="1200" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="-none-">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Exclude">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Output String" dstnodeid="24" dstpinname="Root Node">
+   </LINK>
+   <NODE systemname="DeleteSlice (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="DeleteSlice (Spreads)" componentmode="Hidden" id="27">
+   <BOUNDS type="Node" left="1890" top="2700" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1890" top="2700" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Mesh Id" dstnodeid="27" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Mesh Id" dstnodeid="27" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Output" dstnodeid="1" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Output" dstnodeid="13" dstpinname="Index">
+   </LINK>
+   <NODE systemname="DeleteSlice (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="DeleteSlice (String)" componentmode="Hidden" id="28">
+   <BOUNDS type="Node" left="6255" top="3705" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6255" top="3705" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="28" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Mesh Id" dstnodeid="28" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="28" srcpinname="Output" dstnodeid="16" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="DeleteSlice (Transform)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="DeleteSlice (Transform)" componentmode="Hidden" id="29">
+   <BOUNDS type="Node" left="2790" top="3705" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2790" top="3705" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="29" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Mesh Id" dstnodeid="29" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Output" dstnodeid="3" dstpinname="Transform In 1">
    </LINK>
    </PATCH>
